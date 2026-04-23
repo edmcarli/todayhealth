@@ -1,0 +1,614 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SonusZen™ | Hearing Support Supplement</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=Lexend:wght@700;800&display=swap" rel="stylesheet">
+
+<style>
+:root{
+  --brand-grad: linear-gradient(90deg,#f6c453,#f29f05);
+  --text-main:#1e293b;
+  --bg-body:#f8fafc;
+  --white:#ffffff;
+  --border:#e2e8f0;
+
+  /* Added for pricing visuals */
+  --indigo-main:#6B3FA0;
+  --btn-green:#04ac5b;
+  --card-border:#e6e0f2;
+  --card-shadow: 0 10px 24px rgba(16,24,40,0.06);
+  --muted:#64748b;
+  --accent-yellow:#ffd700;
+}
+
+/* RESET & BASE */
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{width:100%;overflow-x:hidden;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}
+body{
+  font-family:'Inter',sans-serif;
+  background:var(--bg-body);
+  color:var(--text-main);
+  line-height:1.6;
+  -webkit-text-size-adjust:100%;
+}
+
+/* IMAGES */
+img{max-width:100%;display:block;height:auto}
+
+/* LAYOUT CONTAINERS */
+.container{
+  max-width:1200px;
+  margin:0 auto;
+  padding:0 20px;
+}
+
+/* DISCLOSURE + NAV */
+.ad-disclosure{
+  background:#fff;
+  text-align:center;
+  font-size:11px;
+  padding:10px;
+  color:#94a3b8;
+  text-transform:uppercase;
+  letter-spacing:1px;
+  font-weight:700;
+  border-bottom:1px solid var(--border);
+}
+
+nav{
+  background:#fff;
+  padding:15px 0;
+  box-shadow:0 2px 10px rgba(0,0,0,.05);
+  position:sticky;
+  top:0;
+  z-index:1000;
+}
+
+.nav-flex{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:16px;
+}
+
+.logo{
+  font-family:'Lexend';
+  font-size:26px;
+  font-weight:800;
+  text-decoration:none;
+  color:#0f172a;
+}
+
+.logo span{color:#f59e0b}
+
+.nav-btn{
+  background:var(--brand-grad);
+  color:#000;
+  padding:10px 22px;
+  border-radius:50px;
+  font-weight:700;
+  text-decoration:none;
+  font-size:14px;
+  display:inline-block;
+}
+
+/* HERO */
+.editorial{
+  background:#fff;
+  padding:60px 0;
+  text-align:center;
+}
+
+.editorial h1{
+  font-family:'Lexend';
+  font-size:clamp(30px,5vw,42px);
+  margin-bottom:20px;
+}
+
+.editorial p{
+  font-size:20px;
+  color:var(--muted);
+  max-width:850px;
+  margin:0 auto;
+}
+
+/* WHY */
+.why-section{
+  background:#f1f5f9;
+  padding:40px 0;
+  text-align:center;
+}
+.why-section p{max-width:900px;margin:0 auto;color:#475569;}
+
+/* STEPS */
+.steps-section{
+  background:#fff;
+  padding:60px 0;
+  border-top:1px solid #eee;
+  text-align:center;
+}
+.steps-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  gap:30px;
+  margin-top:40px;
+}
+.step-num{
+  width:40px;height:40px;
+  background:var(--brand-grad);
+  border-radius:50%;
+  display:flex;align-items:center;justify-content:center;
+  margin:0 auto 15px;font-weight:800;color:#000;
+}
+
+/* PRICING SECTION - NEW COMPLETE STYLES */
+#esconder{padding:40px 0;background:transparent;}
+
+/* Pricing grid wrapper */
+.pricing-grid,
+.ofertas-container{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:20px;
+  align-items:stretch;
+  justify-items:stretch;
+  max-width:1200px;
+  margin:12px auto 30px;
+  padding:0 18px;
+}
+
+/* Base card */
+.card{
+  background:var(--white);
+  border:1px solid var(--card-border);
+  border-radius:14px;
+  padding:18px;
+  box-shadow:var(--card-shadow);
+  display:flex;
+  flex-direction:column;
+  justify-content:space-between;
+  transition:transform .18s ease, box-shadow .18s ease, border-color .18s ease;
+  overflow:hidden;
+  min-height:520px; /* keep cards visually balanced */
+}
+
+/* Hover emphasis */
+.card:hover{
+  transform:translateY(-6px);
+  box-shadow:0 18px 36px rgba(16,24,40,0.12);
+  border-color:rgba(107,70,193,0.10);
+}
+
+/* Best-value variant */
+.card--best{
+  background:linear-gradient(180deg,var(--indigo-main),#4a2c83);
+  color:#fff;
+  border:2px solid rgba(255,255,255,0.06);
+}
+
+/* Header kicker */
+.card-header{
+  font-weight:800;
+  text-transform:uppercase;
+  letter-spacing:.6px;
+  font-size:14px;
+  color:var(--muted);
+  display:inline-block;
+  margin-bottom:12px;
+  background:transparent;
+  padding:6px 10px;
+  border-radius:8px;
+}
+
+/* Ensure contrast for best card header */
+.card--best .card-header{ color:#fff; background:rgba(0,0,0,0.12) }
+
+/* Card inner body */
+.card-body{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  text-align:center;
+  gap:12px;
+  flex:1;
+}
+
+/* Quantity headline */
+.h3{
+  font-size:32px;
+  font-weight:900;
+  letter-spacing:0.3px;
+  color:var(--text-main);
+  margin-bottom:4px;
+}
+.card--best .h3{color:#fff;font-size:36px}
+
+/* Sub text */
+.sub{font-size:16px;color:var(--muted);font-weight:600;margin-bottom:8px}
+.card--best .sub{color:rgba(255,255,255,0.9)}
+
+/* Product images in cards */
+.card img.pote,
+.card img[alt*="bottles"],
+.card img[alt*="kits"]{
+  width:auto;
+  max-width:220px;
+  height:auto;
+  display:block;
+  margin:6px auto;
+  object-fit:contain;
+}
+
+/* Price area */
+.price-area{display:flex;flex-direction:column;align-items:center;gap:6px;margin-top:6px}
+.price-area .was{font-weight:800;color:var(--muted);text-decoration:line-through;font-size:16px}
+.price-area .now{font-weight:900;font-size:28px;color:var(--text-main)}
+.card--best .price-area .now{color:#fff;font-size:40px}
+
+/* shipping line */
+.card .ship-text{font-weight:800;font-size:14px;margin-top:6px;color:var(--muted)}
+.card--best .ship-text{color:var(--btn-green)}
+
+/* Bullets */
+.bullets{
+  list-style:none;padding:0;margin:8px 0 12px;width:100%;
+  display:flex;flex-direction:column;gap:8px;align-items:flex-start;
+}
+.bullets li{
+  display:flex;gap:10px;align-items:center;font-weight:800;color:var(--text-main);font-size:14px;
+}
+.card--best .bullets li{color:rgba(255,255,255,0.95)}
+
+/* Icon fallback alignment */
+.bullets li i{width:20px;text-align:center;color:var(--indigo-main)}
+
+/* Buttons */
+.btn{
+  display:inline-block;padding:12px 18px;border-radius:10px;font-weight:900;font-size:16px;
+  text-decoration:none;text-align:center;color:#000;background:linear-gradient(90deg,#f6c453,#f29f05);
+  border:2px solid rgba(0,0,0,0.06);box-shadow:0 6px 0 rgba(0,0,0,0.12);width:92%;max-width:260px;margin:10px auto 6px;
+}
+.btn--indigo{
+  background:linear-gradient(90deg,#ffffff,#f0f0f0);color:var(--indigo-main);border:2px solid rgba(255,255,255,0.06);box-shadow:0 6px 0 rgba(0,0,0,0.18);
+}
+
+/* Surprise animation (subtle) */
+.surprise-bounce{
+  display:inline-block;transform-origin:center bottom;animation:surprise-pop 6s cubic-bezier(.34,1.56,.64,1) .2s infinite both;will-change:transform;
+}
+@keyframes surprise-pop{
+  0%{transform:translateY(24px) scale(.6) rotate(-2deg);opacity:0}
+  16%{transform:translateY(-8px) scale(1.15) rotate(0);opacity:1}
+  22%{transform:translateY(0) scale(1)}
+  28%{transform:translateY(0) scale(1)}
+  100%{transform:translateY(0) scale(1);opacity:1}
+}
+@media (prefers-reduced-motion: reduce){.surprise-bounce{animation:none}}
+
+/* Responsive rules */
+@media (max-width:1024px){
+  .pricing-grid{grid-template-columns:repeat(2,1fr)}
+  .card img.pote, .card img[alt*="bottles"], .card img[alt*="kits"]{max-width:160px}
+  .card{min-height:520px}
+}
+
+@media (max-width:720px){
+  .pricing-grid{grid-template-columns:1fr;padding:0 12px}
+  .nav-flex{flex-direction:column;gap:8px}
+  .h3{font-size:28px}
+  .card{padding:16px;min-height:auto}
+  .btn{width:100%}
+}
+
+/* INGREDIENTS / REFERENCES / INFO / FOOTER (keeps original look) */
+.ingredients-section{
+  background:#fff;
+  padding:60px 0;
+}
+.ingredients-box{
+  max-width:900px;margin:0 auto;padding:30px;border:1px solid var(--border);border-radius:14px;background:#f8fafc;line-height:1.8;font-size:15px;
+}
+.references-section{background:#ffffff;padding:60px 0}
+.references-box{max-width:900px;margin:0 auto;padding:30px;border:1px solid #e2e8f0;border-radius:14px;background:#f8fafc;font-size:14px;line-height:1.8}
+.info-section{background:#fff;padding:60px 0}
+.disclaimer-box{max-width:1000px;margin:0 auto;padding:25px;border:1px solid #1e293b;border-radius:12px}
+.site-footer{width:100%;background:linear-gradient(180deg,#0b1220,#020617);padding:80px 20px 50px;text-align:center;color:#94a3b8;font-size:13px}
+.footer-links{margin-bottom:30px}
+.footer-links a{color:#fff;margin:0 14px;text-decoration:underline;opacity:.7}
+.footer-disclaimer{max-width:1100px;margin:0 auto 30px;background:#fff;color:#64748b;padding:20px 30px;border-radius:12px}
+.footer-copy{opacity:.4}
+</style>
+</head>
+
+<body>
+
+<div class="ad-disclosure">Advertisement / Sponsored Content</div>
+
+<nav>
+  <div class="container nav-flex">
+    <a href="#order" class="logo">Sonus<span>Zen</span></a>
+    <a href="#order" class="nav-btn">VIEW OPTIONS</a>
+  </div>
+</nav>
+
+<section class="editorial">
+  <div class="container">
+    <h1>Daily Nutritional Support Designed for Hearing Wellness</h1>
+    <p>
+      SonusZen™ is a dietary supplement formulated with vitamins,
+      minerals and plant-based compounds commonly used in
+      hearing and wellness support formulas.
+    </p>
+  </div>
+</section>
+
+<section class="why-section">
+  <div class="container">
+    <h2 style="font-family:'Lexend';margin-bottom:20px;">Why SonusZen™?</h2>
+    <p>
+      SonusZen™ combines nutrients that are frequently studied
+      in relation to circulation, antioxidant protection,
+      and overall ear health.  
+      It is designed to fit into a daily wellness routine.
+    </p>
+  </div>
+</section>
+
+<section class="steps-section">
+  <div class="container">
+    <h2 style="font-family:'Lexend';font-size:32px;">Simple Daily Routine</h2>
+
+    <div class="steps-grid">
+
+      <div>
+        <div class="step-num">1</div>
+        <h4>Take Daily</h4>
+        <p>Follow label directions.</p>
+      </div>
+
+      <div>
+        <div class="step-num">2</div>
+        <h4>Stay Consistent</h4>
+        <p>Use as part of your daily routine.</p>
+      </div>
+
+      <div>
+        <div class="step-num">3</div>
+        <h4>Support Wellness</h4>
+        <p>Combine with healthy lifestyle habits.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- START HIDDEN / PRICING SECTION -->
+<div id="esconder" class="esconder">
+  <h2 class="offer-headline" style="text-align:center;font-family:'Lexend';margin-bottom:18px;">Select Your Discounted Package Below:</h2>
+
+  <div class="pricing-grid smartplayer-scroll-event">
+      <!-- Offer 1 -->
+      <article class="card">
+          <div class="card-header">Basic</div>
+          <div class="card-body">
+              <div class="h3">2 BOTTLES</div>
+              <div class="sub">60 DAY SUPPLY</div>
+              <img src="https://lp.institutoexperience.com.br/wp-content/uploads/2025/09/SZ-Sonus-Zen-2-potes.png" alt="2 bottles" style="height:160px; margin: 10px auto;">
+              <div class="price-area">
+                  <div class="was">$186</div>
+                  <p class="now">$158</p>
+              </div>
+              <p class="ship-text" style="font-weight:800;">+ $9.99 SHIPPING</p>
+              <ul class="bullets">
+                  <li><i class="fas fa-check-circle" aria-hidden="true"></i> YOU SAVE $28</li>
+                  <li><i class="fas fa-check-circle" aria-hidden="true"></i> 15% DISCOUNT</li>
+                  <li><i class="fas fa-check-circle" aria-hidden="true"></i> 60 DAYS GUARANTEE</li>
+              </ul>
+              <a href="https://instituto-experience.mycartpanda.com/checkout/195690643:1?afid=JZdwEU3FAg" class="btn">ADD TO CART</a>
+          </div>
+      </article>
+
+      <!-- Offer 2 - BEST VALUE -->
+      <article class="card card--best">
+          <div class="card-header">🧘 BEST VALUE</div>
+          <div class="card-body">
+              <div class="h3 surprise-bounce">6 BOTTLES</div>
+              <div class="sub" style="color: var(--indigo-main);">180 DAY SUPPLY</div>
+              <img src="https://lp.institutoexperience.com.br/wp-content/uploads/2025/09/SZ-Sonus-Zen-6-potes-1.png" alt="6 bottles" style="height:180px; margin: 10px auto;">
+              <div class="price-area">
+                  <div class="was">$588</div>
+                  <p class="now">$294</p>
+              </div>
+              <p class="ship-text" style="font-weight:800;color:var(--btn-green);">FREE SHIPPING</p>
+              <ul class="bullets">
+                  <li style="color: var(--indigo-main);"><i class="fas fa-check-circle" style="color: var(--indigo-main);" aria-hidden="true"></i> YOU SAVE $294</li>
+                  <li><i class="fas fa-check-circle" aria-hidden="true"></i> 50% DISCOUNT</li>
+                  <li><i class="fas fa-check-circle" aria-hidden="true"></i> 3 FREE BOTTLES</li>
+                  <li class="surprise-bounce" style="color:#d4af37;"><i class="fas fa-gift" aria-hidden="true"></i> SURPRISE INCLUDED</li>
+              </ul>
+              <a href="https://instituto-experience.mycartpanda.com/checkout/195690653:1?afid=BBPeT7dMwY" class="btn btn--indigo">ADD TO CART</a>
+          </div>
+      </article>
+
+      <!-- Offer 3 -->
+      <article class="card">
+          <div class="card-header">Good Value</div>
+          <div class="card-body">
+              <div class="h3">3 BOTTLES</div>
+              <div class="sub">90 DAY SUPPLY</div>
+              <img src="https://lp.institutoexperience.com.br/wp-content/uploads/2025/09/SZ-Sonus-Zen-3-potes.png" alt="3 bottles" style="height:160px; margin: 10px auto;">
+              <div class="price-area">
+                  <div class="was">$294</div>
+                  <p class="now">$207</p>
+              </div>
+              <p class="ship-text" style="font-weight:800;color:var(--btn-green);">FREE SHIPPING</p>
+              <ul class="bullets">
+                  <li><i class="fas fa-check-circle" aria-hidden="true"></i> YOU SAVE $87</li>
+                  <li><i class="fas fa-check-circle" aria-hidden="true"></i> 1 FREE BOTTLE</li>
+                  <li><i class="fas fa-check-circle" aria-hidden="true"></i> 30% DISCOUNT</li>
+                  <li><i class="fas fa-check-circle" aria-hidden="true"></i> 60 DAYS GUARANTEE</li>
+              </ul>
+              <a href="https://instituto-experience.mycartpanda.com/checkout/195690648:1?afid=rq7BcUDr99" class="btn">ADD TO CART</a>
+          </div>
+      </article>
+  </div>
+</div>
+<!-- END PRICING SECTION -->
+
+<section class="ingredients-section">
+  <div class="container">
+    <h2 style="font-family:'Lexend';text-align:center;margin-bottom:30px;">
+      Supplement Facts & Ingredients
+    </h2>
+
+    <div class="ingredients-box">
+
+      <p><strong>Product Type:</strong> Dietary Supplement</p>
+      <p><strong>Serving Size:</strong> As indicated on label</p>
+      <p><strong>Servings Per Container:</strong> 30</p>
+
+      <hr style="margin:20px 0">
+
+      <p><strong>Key Ingredients:</strong></p>
+
+      <ul>
+        <li>Magnesium</li>
+        <li>Zinc</li>
+        <li>Vitamin B12</li>
+        <li>Vitamin B6</li>
+        <li>Vitamin D</li>
+        <li>Curcumin Extract</li>
+        <li>Trans-Resveratrol</li>
+        <li>Selenium</li>
+        <li>L-Arginine</li>
+      </ul>
+
+      <p><strong>Other Ingredients:</strong></p>
+
+      <ul>
+        <li>Vegetable capsule</li>
+        <li>Natural stabilizers</li>
+      </ul>
+
+      <p class="ingredients-note">
+        Manufactured in a GMP-certified facility.
+      </p>
+
+    </div>
+  </div>
+</section>
+
+<section class="references-section">
+  <div class="container">
+    <h2 style="font-family:'Lexend';text-align:center;margin-bottom:30px;">
+      Scientific & Educational References
+    </h2>
+
+    <div class="references-box">
+
+      <ul>
+
+        <li>
+        National Institute on Deafness and Other Communication Disorders.  
+        <em>Tinnitus Overview.</em><br>
+        https://www.nidcd.nih.gov/health/tinnitus
+        </li>
+
+        <li>
+        Mayo Clinic.  
+        <em>Tinnitus: Symptoms and Causes.</em><br>
+        https://www.mayoclinic.org/diseases-conditions/tinnitus
+        </li>
+
+        <li>
+        NIH Office of Dietary Supplements.  
+        <em>Vitamins and Minerals.</em><br>
+        https://ods.od.nih.gov
+        </li>
+
+      </ul>
+
+      <p class="references-note">
+        These references are provided for educational purposes only.
+      </p>
+
+    </div>
+  </div>
+</section>
+
+<section class="info-section">
+  <div class="container">
+    <h2 style="font-family:'Lexend';text-align:center;">Important Information</h2>
+
+    <div class="disclaimer-box">
+      <p>This product is a dietary supplement.</p>
+      <p>This product is not intended to diagnose, treat, cure, or prevent any disease.</p>
+      <p>Results may vary between individuals.</p>
+      <p>Consult a healthcare professional before use.</p>
+      <p>The information provided on this page is for informational purposes only.</p>
+    </div>
+
+  </div>
+</section>
+<footer class="site-footer">
+
+  <div class="footer-links">
+    <a href="policy.html">Privacy Policy</a>
+    <a href="policy.html">Terms of Service</a>
+    <a href="policy.html">Shipping & Returns</a>
+    <a href="policy.html">Refund Policy</a>
+    <a href="policy.html">Contact</a>
+  </div>
+
+  <div class="footer-disclaimer">
+
+    <p>
+      <strong>Advertisement Disclosure:</strong> 
+      This website contains promotional content and may receive compensation
+      for products featured on this page. This page is not intended to provide
+      medical advice and should not be interpreted as professional guidance.
+    </p>
+
+    <br>
+
+    <p>
+      <strong>Medical Disclaimer:</strong> 
+      The information presented on this website is for informational and
+      educational purposes only and is not intended as medical advice.
+      Always consult a qualified healthcare professional before beginning
+      any dietary supplement or wellness program.
+    </p>
+
+    <br>
+
+    <p>
+      <strong>FDA Disclaimer:</strong> 
+      These statements have not been evaluated by the Food and Drug Administration.
+      This product is not intended to diagnose, treat, cure, or prevent any disease.
+    </p>
+
+    <br>
+
+    <p>
+      <strong>Results Disclaimer:</strong> 
+      Individual results may vary. Testimonials and examples used are
+      exceptional results and are not intended to represent or guarantee
+      that anyone will achieve the same results.
+    </p>
+
+  </div>
+
+  <div class="footer-copy">
+    © <span id="year"></span> SonusZen Labs LLC. All Rights Reserved.
+  </div>
+
+</footer>
+<script>
+document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+
+</body>
+</html>
