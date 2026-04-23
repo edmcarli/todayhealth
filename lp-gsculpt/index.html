@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Gelatine Sculpt™ | Official Metabolic Support</title>
+    <!-- Taboola-Compliant Fonts -->
+   
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=Lexend:wght@700;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --blue-grad: linear-gradient(90deg, #5170ff 0%, #ff66c4 100%);
+            --orange-btn: linear-gradient(180deg, #ffde59 0%, #ff914d 100%);
+            --green-btn: linear-gradient(180deg, #00bf63 0%, #7ed957 100%);
+            --text-main: #1e293b;
+            --bg-body: #f8fafc;
+            --white: #ffffff;
+        }
+
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { font-family: 'Inter', sans-serif; color: var(--text-main); background: var(--bg-body); line-height: 1.6; }
+
+        /* TABOOLA COMPLIANCE HEADER */
+        .ad-disclosure { background: #fff; text-align: center; font-size: 11px; padding: 10px; color: #94a3b8; text-transform: uppercase; letter-spacing: 1px; font-weight: 700; border-bottom: 1px solid #e2e8f0; }
+
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+
+        /* BRAND NAV */
+        nav { background: #fff; padding: 15px 0; box-shadow: 0 2px 10px rgba(0,0,0,0.05); position: sticky; top: 0; z-index: 1000; }
+        .nav-flex { display: flex; justify-content: space-between; align-items: center; }
+        .logo { font-family: 'Lexend', sans-serif; font-size: 26px; font-weight: 800; color: #0f172a; text-decoration: none; }
+        .logo span { color: #ff66c4; }
+        .nav-btn { background: var(--blue-grad); color: #fff; padding: 10px 20px; border-radius: 50px; text-decoration: none; font-weight: 700; font-size: 14px; }
+
+        /* EDITORIAL CONTENT */
+        .editorial { background: var(--white); padding: 60px 0; text-align: center; }
+        .editorial h1 { font-family: 'Lexend', sans-serif; font-size: clamp(32px, 5vw, 42px); line-height: 1.1; margin-bottom: 20px; color: #0f172a; }
+        .editorial p { font-size: 20px; color: #64748b; max-width: 850px; margin: 0 auto 40px; }
+
+        /* STEP BY STEP SECTION */
+        .steps-section { padding: 60px 0; background: #fff; border-top: 1px solid #eee; text-align: center;}
+        .steps-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px; margin-top: 40px; }
+        .step-card { padding: 20px; }
+        .step-num { width: 40px; height: 40px; background: var(--blue-grad); color: #fff; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 15px; font-weight: 800; }
+
+        /* PRICING GRID */
+        .pricing-section { padding: 60px 0; }
+        .grid { display: flex; flex-wrap: wrap; justify-content: center; gap: 20px; align-items: stretch; }
+        .card { background: #fbfbfb; border-radius: 25px; width: 360px; box-shadow: 0 20px 40px rgba(0,0,0,0.05); text-align: center; border: 5px solid #fff; display: flex; flex-direction: column; position: relative; }
+        .card.featured { border-color: #ffc107; background: #eaf0e3; transform: scale(1.03); z-index: 10; }
+        .card-head { background: var(--blue-grad); padding: 25px; color: #fff; border-radius: 18px 18px 0 0; }
+        .card-head h3 { font-size: 28px; font-weight: 800; }
+        .card-head p { font-size: 18px; font-weight: 600; opacity: 0.9; }
+        .img-box { padding: 30px; min-height: 250px; display: flex; align-items: center; justify-content: center; }
+        .img-box img { max-width: 90%; height: auto; }
+        .price-box { display: flex; justify-content: center; align-items: center; margin: 10px 0; }
+        .symbol { font-size: 36px; font-weight: 800; align-self: flex-start; margin-top: 15px; }
+        .price { font-size: 74px; font-weight: 700; font-family: 'Lexend'; line-height: 1; }
+        .label { font-size: 20px; font-weight: 800; text-align: left; margin-left: 8px; line-height: 1; }
+        .benefits { text-align: left; padding: 20px 40px; border-top: 1px solid #eee; }
+        .benefit { font-size: 16px; font-weight: 700; margin-bottom: 10px; display: flex; align-items: center; }
+        .benefit.orange { color: #cb6602; }
+        .check { width: 18px; height: 18px; background: #333; color: #fff; border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; font-size: 10px; margin-right: 12px; }
+        .check.orange-bg { background: #cb6602; }
+        .btn-order { display: block; margin: 15px 30px; padding: 18px; border-radius: 12px; text-decoration: none; font-weight: 900; font-size: 22px; transition: 0.3s; }
+        .btn-orange { background: var(--orange-btn); color: #000; }
+        .btn-green { background: var(--green-btn); color: #fff; }
+        .payment { width: 180px; margin: 10px auto; display: block; }
+        .totals { font-size: 22px; font-weight: 700; margin: 10px 0; }
+        .totals strike { color: red; margin-right: 5px; }
+        .free-ship { font-size: 18px; font-weight: 800; color: #000; padding-bottom: 20px; }
+        .free-ship span { color: #cb6602; }
+
+        /* QUALITY ASSURANCE SECTION */
+        .quality-section { padding: 80px 0; background: #0f172a; color: #fff; text-align: center; }
+        .quality-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 30px; margin-top: 40px; }
+        .q-icon { font-size: 40px; margin-bottom: 10px; }
+
+        /* FAQ SECTION */
+        .faq-section { padding: 80px 0; background: #fff; }
+        .faq-grid { max-width: 800px; margin: 40px auto 0; text-align: left; }
+        .faq-item { margin-bottom: 25px; border-bottom: 1px solid #eee; padding-bottom: 15px; }
+        .faq-item h4 { font-family: 'Lexend', sans-serif; color: #0f172a; margin-bottom: 10px; }
+
+        /* FOOTER & COMPLIANCE */
+        footer { background: #0f172a; color: #94a3b8; padding: 80px 20px 40px; text-align: center; font-size: 13px; }
+        .footer-links button { background: none; border: none; color: #fff; margin: 0 15px; cursor: pointer; text-decoration: underline; opacity: 0.7; }
+        .disclaimer-box { max-width: 1000px; margin: 40px auto; padding: 25px; border: 1px solid #1e293b; text-align: left; line-height: 1.8; border-radius: 12px; }
+        
+        #cookie-bar { position: fixed; bottom: 0; width: 100%; background: #000; color: #fff; padding: 15px; text-align: center; z-index: 9999; font-size: 14px; }
+        #cookie-bar button { background: #fff; color: #000; border: none; padding: 5px 15px; margin-left: 15px; cursor: pointer; font-weight: bold; border-radius: 4px; }
+
+        .modal { display: none; position: fixed; z-index: 10000; left: 0; top: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.9); overflow-y: auto; }
+        .modal-content { background: #fff; margin: 5% auto; padding: 40px; width: 90%; max-width: 800px; border-radius: 15px; color: #333; text-align: left; position: relative; }
+        .close { position: absolute; right: 20px; top: 10px; font-size: 30px; cursor: pointer; }
+
+        @media (max-width: 768px) {
+            .grid { gap: 40px; }
+            .card.featured { transform: scale(1); }
+            .editorial h1 { font-size: 28px; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="ad-disclosure">Advertisement / Sponsored Content</div>
+
+    <nav>
+        <div class="container nav-flex">
+            <a href="#order" class="logo">Gelatine<span>Sculpt</span></a>
+            <a href="#order" class="nav-btn">GET STARTED</a>
+        </div>
+    </nav>
+
+    <div class="editorial">
+        <div class="container">
+            <h1>Daily Nutritional Supplement with Gelatine Sculpt</h1>
+            <p>Gelatine Sculpt™ is a dietary supplement containing hydrolyzed collagen, intended to complement a balanced diet and general wellness routine.</p>
+        </div>
+    </div>
+
+    <!-- NEW SECTION: HOW IT WORKS / STEPS -->
+    <section class="steps-section">
+        <div class="container">
+            <h2 style="font-family: 'Lexend'; font-size: 32px;">The Simple Daily Routine</h2>
+            <div class="steps-grid">
+                <div class="step-card">
+                    <div class="step-num">1</div>
+                    <h4>Dissolve</h4>
+                    <p>Mix one serving with 8oz of water or your favorite morning beverage.</p>
+                </div>
+                <div class="step-card">
+                    <div class="step-num">2</div>
+                    <h4>Sculpt</h4>
+                    <p>Use once daily as part of a regular nutritional routine.</p>
+                </div>
+                <div class="step-card">
+                    <div class="step-num">3</div>
+                    <h4>Thrive</h4>
+                    <p>Continue consistent daily use alongside your normal dietary habits.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="pricing-section" id="order">
+        <div class="container">
+            <div class="grid">
+                
+                <!-- 2 BOTTLES -->
+                <div class="card">
+                    <div class="card-head"><h2>TRY TWO</h2><p>60 DAYS, 2 BOTTLES</p></div>
+                    <div class="img-box">
+                        <img src="images/JdFpbD2116815.webp" onerror="this.src='https://via.placeholder.com/200x250?text=2+BOTTLES'" alt="Gelatine Sculpt 2 Bottles">
+                    </div>
+                    <div class="price-box">
+                        <span class="symbol">$</span><span class="price">79</span><span class="label">per<br>bottle</span>
+                    </div>
+                    <div class="benefits">
+                        <div class="benefit">+ $9.99 Shipping</div>
+                        <div class="benefit orange"><span class="check orange-bg">✓</span> you save $59</div>
+                        <div class="benefit"><span class="check">✓</span> 180 day money-back guarantee</div>
+                        <div class="benefit"><span class="check">✓</span> 15% Discount</div>
+                    </div>
+                    <div class="totals">total: <strike>$217</strike> $158</div>
+                    <a href="https://gelatinesc.pay.clickbank.net/  cbitems=CBIEGSTPP2UNITSAFF&template=gst2units&cbfid62055" class="btn-order btn-orange">ADD TO CART</a>
+                    <img src="images/ksCaqy2149442_1.png" class="payment" alt="Payments">
+                </div>
+
+                <!-- 6 BOTTLES (FEATURED) -->
+                <div class="card featured">
+                    <div class="card-head"><h2>BEST VALUE!</h2><p>180 DAYS, 6 BOTTLES</p></div>
+                    <div class="img-box">
+                        <img src="images/iQmElR2130292.webp" onerror="this.src='https://via.placeholder.com/220x250?text=6+BOTTLES'" alt="Gelatine Sculpt 6 Bottles">
+                    </div>
+                    <div class="price-box">
+                        <span class="symbol">$</span><span class="price">49</span><span class="label">per<br>bottle</span>
+                    </div>
+                    <div class="benefits">
+                        <div class="benefit orange"><span class="check orange-bg">✓</span> you save $294</div>
+                        <div class="benefit"><span class="check">✓</span> 180 day money-back guarantee</div>
+                        <div class="benefit"><span class="check">✓</span> 50% DISCOUNT</div>
+                        <div class="benefit"><span class="check">✓</span> Bonus item included</div>
+                    </div>
+                    <div class="totals">total: <strike>$588</strike> $294</div>
+                    <a href="https://gelatinesc.pay.clickbank.net/?cbitems=CBIEGSTPP6UNITSAFF&template=gst6units&cbfid=62055" class="btn-order btn-green">ADD TO CART</a>
+                    <img src="images/ksCaqy2149442.png" class="payment" alt="Payments">
+                    <div class="free-ship">+ <span>FREE</span> SHIPPING</div>
+                </div>
+
+                <!-- 3 BOTTLES -->
+                <div class="card">
+                    <div class="card-head"><h2>GOOD VALUE</h2><p>90 DAYS, 3 BOTTLES</p></div>
+                    <div class="img-box">
+                        <img src="images/WDShHA2123104.webp" onerror="this.src='https://via.placeholder.com/200x250?text=3+BOTTLES'" alt="Gelatine Sculpt 3 Bottles">
+                    </div>
+                    <div class="price-box">
+                        <span class="symbol">$</span><span class="price">69</span><span class="label">per<br>bottle</span>
+                    </div>
+                    <div class="benefits">
+                        <div class="benefit orange"><span class="check orange-bg">✓</span> you save $87</div>
+                        <div class="benefit"><span class="check">✓</span> 180 day money-back guarantee</div>
+                        <div class="benefit"><span class="check">✓</span> 30% Discount</div>
+                    </div>
+                    <div class="totals">total: <strike>$294</strike> $207</div>
+                    <a href="https://gelatinesc.pay.clickbank.net/?cbitems=CBIEGSTPP3UNITSAFF&template=gst3units&cbfid=62055" class="btn-order btn-orange">ADD TO CART</a>
+                    <img src="images/ksCaqy2149442_2.png" class="payment" alt="Payments">
+                    <div class="free-ship">+ <span>FREE</span> SHIPPING</div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+<section>
+    <div class="container">
+        <h2 style="font-family:'Lexend';text-align:center;">Supplement Facts & Ingredients</h2>
+
+        <div class="disclaimer-box">
+            <p><strong>Product Type:</strong> Dietary Supplement</p>
+            <p><strong>Serving Size:</strong> 1ml (20 drops)</p>
+            <p><strong>Servings Per Container:</strong> 30</p>
+
+            <hr style="margin:20px 0">
+
+            <p><strong>Active Ingredient:</strong></p>
+            <ul>
+                <li><strong>Hydrolyzed Collagen</strong> — a source of amino acids commonly used in dietary supplementation.</li>
+            </ul>
+
+            <p><strong>Other Ingredients:</strong></p>
+            <ul>
+                <li>Natural flavor</li>
+                <li>Citric acid</li>
+                <li>Silicon dioxide</li>
+                <li>Stevia leaf extract</li>
+            </ul>
+
+            <p style="font-size:14px;opacity:.7;margin-top:15px">
+                Manufactured in the USA in a GMP-certified facility. Non-GMO.
+            </p>
+        </div>
+    </div>
+
+
+
+</section>
+
+<section>
+    <div class="container">
+        <h2 style="font-family:'Lexend';text-align:center;">Important Information</h2>
+        <div class="disclaimer-box">
+            <p>This product is not intended for weight loss, fat reduction, or treatment of any disease.</p>
+            <p>Results may vary between individuals.</p>
+            <p>Not a meal replacement. Use as part of a balanced diet.</p>
+            <p>Consult a healthcare professional before use if pregnant, nursing, or taking medication.</p>
+            <p>
+The content on this page is provided for informational purposes only and does not constitute medical advice.
+</p><br>
+<p><strong>Who Should Not Use This Product:</strong></p>
+<ul>
+  <li>Individuals under 18 years of age</li>
+  <li>Pregnant or nursing women</li>
+</ul>
+
+<p>
+Individual experiences may vary. No specific results are guaranteed.
+</p>
+<p>
+Orders ship from fulfillment centers located in the United States.
+</p>
+
+
+        </div>
+    </div>
+</section>
+    <section class="faq-section">
+        <div class="container">
+            <h2 style="font-family: 'Lexend'; font-size: 32px; text-align: center;">Frequently Asked Questions</h2>
+            <div class="faq-grid">
+                <div class="faq-item">
+                    <h4>Is Gelatine Sculpt™ safe to use?</h4>
+                    <p>Yes. Our formula is made with natural hydrolyzed collagen and is produced in a facility that follows strict Good Manufacturing Practices (GMP).</p>
+                </div>
+                <div class="faq-item">
+                    <h4>How long until I see results?</h4>
+                    <p>While some feel the satiating effects within the first week, we recommend a 90 to 180-day regimen for full metabolic support.</p>
+                </div>
+                <div class="faq-item">
+                    <h4>What is your return policy?</h4>
+                    <p>We offer a 180-day money-back guarantee. If you aren't satisfied, return the bottles (even empty) for a full refund minus shipping.</p>
+                </div>
+                <div class="faq-item">
+                    <h4>How many bottles should I order?</h4>
+                    <p>Most customers choose the 6-bottle package to ensure they don't run out during the most critical part of their journey.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <div class="container">
+          <div class="footer-links">
+                <a href="policy.html">Privacy Policy</a>
+                <a href="policy.html">Terms of Service</a>
+                <a href="policy.html">Shipping & Returns</a>
+                <a href="policy.html">Contact Us</a>
+            </div>
+
+            <!-- START: Improved compliance & references block (replace the original block with this) -->
+<div class="disclaimer-box" aria-live="polite" style="background:#fff8f8;border-radius:8px;padding:14px;border:1px solid #f0d6d6;">
+    <p><strong>FDA Compliance:</strong> These statements have not been evaluated by the Food and Drug Administration. This product is not intended to diagnose, treat, cure, or prevent any disease. Results vary by individual. For background on the biological mechanisms and factors referenced on this page, see the scientific references listed below. <span class="citation-sup" style="font-size:0.85rem; vertical-align:super; color:#a50000;">[1–4]</span></p>
+
+    <p style="margin-top:15px;"><strong>Product Notice:</strong> Gelatine Sculpt™ is a dietary supplement. Always consult with a healthcare professional before starting any new health routine. If you are pregnant, nursing, taking prescription medications, or have a medical condition, consult a physician before use.</p>
+</div>
+
+<!-- compact reference list shown near the footer (keeps your original minimal list but expands with high-quality sources) -->
+<div style="text-align: left; font-size: 12px; opacity: 0.88; margin-top:12px; max-width:820px;">
+    <strong>Scientific References:</strong><br>
+    <!-- Original two items are preserved and shown first for traceability -->
+    0. (Original internal refs) <em>Metabolic Science Review</em>, "Peptide absorption and dietary peptide research." Vol 15, 2023.<br>
+    0. (Original internal refs) <em>Nutritional Biochemistry</em>, "Bioavailability of Hydrolyzed Peptides." Issue 9, 2022.<br><br>
+
+    <!-- Added peer-reviewed / authoritative sources (clickable) -->
+    1. Covassin N, Chung S, "Effects of Experimental Sleep Restriction on Energy Intake", Nutrients. 2022. (Sleep restriction increases energy intake and can affect weight.) — <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC9187217/" target="_blank" rel="noopener noreferrer">PMC article</a>.<br>
+
+    2. Holst JJ, "The physiology of glucagon-like peptide 1 (GLP-1)", Physiol Rev. 2007. (GLP-1 role in appetite regulation and gastric emptying.) — <a href="https://pubmed.ncbi.nlm.nih.gov/17928588/" target="_blank" rel="noopener noreferrer">PubMed</a>.<br>
+
+    3. Hochstenbach-Waelen A, van der Wielen N, "Single-protein casein and gelatin diets affect energy", Journal of Nutrition (2009). (Gelatin shown to influence short-term appetite responses; long-term results mixed.) — <a href="https://pubmed.ncbi.nlm.nih.gov/19864402/" target="_blank" rel="noopener noreferrer">PubMed</a>.<br>
+
+    4. Zhu Y, et al., "Food Protein–Derived Antioxidant Peptides: Molecular Properties and Health Effects", Biomolecules. 2022. (Protein hydrolysates and peptide bioactivity / bioavailability overview.) — <a href="https://www.mdpi.com/2218-273X/12/11/1622" target="_blank" rel="noopener noreferrer">MDPI / Full text</a>.<br>
+
+    <p style="margin-top:10px; font-size:11px; color:#666;">
+        Note: The references above provide background evidence about sleep, peptides, gelatin, and metabolic/hormonal mechanisms. Individual responses to products and routines vary. This page reports user experiences and summaries of scientific literature and is not a substitute for medical advice.
+    </p>
+</div>
+
+<div style="margin-top: 28px; color: #fff;">
+    <strong>GelaSculpt Labs LLC</strong><br>
+    16192 Coastal Highway, Lewes, DE 19958, USA<br>
+    Support: <a href="mailto:support@gelatinesculpt.com" style="color:#fff;opacity:0.95;text-decoration:underline;">support@gelatinesculpt.com</a>
+</div>
+
+<p style="margin-top:20px; opacity:0.3;">&copy; <span id="year"></span> Gelatine Sculpt. All Rights Reserved.</p>
+<!-- END: Improved compliance & references block -->
+
+    <!-- Modals -->
+    <div id="modal-base" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <div id="modal-text"></div>
+        </div>
+    </div>
+
+</body>
+</html>

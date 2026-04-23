@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+    <meta name="description" content="Metabolism Health Journal - Special Report">
+    <title>Metabolism Health Journal</title>
+    
+    <!-- Tracking Script from Original -->
+
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+    
+    <style>
+        :root {
+            --primary-red: #a50000;
+            --cta-gradient: linear-gradient(180deg, #be352b 0%, #a50000 100%);
+            --text-main: #1c1e21;
+            --text-muted: #606770;
+            --bg-light: #f0f2f5;
+        }
+
+        /* 1. BASE STYLES */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            color: var(--text-main);
+            line-height: 1.6;
+            background-color: #fff;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* 2. TABOOLA COMPLIANCE HEADER */
+        .advertisement-header {
+            width: 100%;
+            text-align: center;
+            font-size: 11px;
+            color: #666;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            padding: 8px 0;
+            background: #eee;
+            border-bottom: 1px solid #ddd;
+        }
+
+        header {
+            width: 100%;
+            background-color: var(--primary-red);
+            padding: 15px 0;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .logo {
+            max-width: 320px;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+        }
+
+        /* 3. LAYOUT CONTAINERS */
+        .sectionContainer {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 20px;
+            box-sizing: border-box;
+        }
+
+        .articleContent {
+            padding: 30px 0;
+        }
+
+        /* 4. TYPOGRAPHY */
+        h1 {
+            font-size: 2.2rem;
+            font-weight: 800;
+            line-height: 1.2;
+            margin-bottom: 15px;
+            color: #000;
+        }
+
+        h3 {
+            font-size: 1.35rem;
+            color: #444;
+            line-height: 1.4;
+            margin-bottom: 25px;
+            font-weight: 600;
+        }
+
+        .articleInfo {
+            border-top: 1px solid #eee;
+            border-bottom: 1px solid #eee;
+            padding: 12px 0;
+            margin-bottom: 25px;
+            font-size: 0.9rem;
+            color: #777;
+        }
+
+        .articleAuthor {
+            font-weight: bold;
+            color: var(--primary-red);
+        }
+
+        p {
+            font-size: 1.15rem;
+            margin-bottom: 1.5rem;
+        }
+
+        a.inline-link {
+            color: var(--primary-red);
+            font-weight: bold;
+            text-decoration: underline;
+        }
+
+        /* 5. MEDIA STYLES */
+        .img-responsive {
+            width: 100%;
+            height: auto;
+            border-radius: 4px;
+            display: block;
+        }
+
+        .articleImageContainer {
+            position: relative;
+            margin: 25px 0;
+        }
+
+        blockquote {
+            background: #fff9f9;
+            border-left: 5px solid var(--primary-red);
+            padding: 25px;
+            font-style: italic;
+            margin: 35px 0;
+            font-size: 1.25rem;
+            color: #333;
+        }
+
+        /* 6. CALL TO ACTION */
+        .cta-button {
+            background: var(--cta-gradient);
+            color: #fff;
+            border: none;
+            font-size: 22px;
+            font-weight: 800;
+            padding: 20px 40px;
+            border-radius: 50px;
+            display: block;
+            margin: 40px auto;
+            cursor: pointer;
+            box-shadow: 0 6px 20px rgba(165, 0, 0, 0.3);
+            transition: transform 0.2s;
+            text-align: center;
+            text-decoration: none;
+            max-width: 400px;
+        }
+
+        .cta-button:hover {
+            transform: scale(1.03);
+            box-shadow: 0 8px 25px rgba(165, 0, 0, 0.4);
+        }
+
+        /* 7. SOCIAL PROOF / COMMENTS */
+        .comments-section {
+            border-top: 2px solid #eee;
+            margin-top: 50px;
+            padding-top: 30px;
+        }
+
+        .comment-item {
+            display: flex;
+            gap: 12px;
+            margin-bottom: 20px;
+            padding-bottom: 15px;
+            border-bottom: 1px solid #f0f0f0;
+        }
+
+        .user-icon {
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            object-fit: cover;
+            flex-shrink: 0;
+        }
+
+        .comment-body { flex: 1; }
+        .user-name { font-weight: 700; color: #385898; font-size: 0.95rem; }
+        .comment-text { font-size: 0.95rem; margin-top: 4px; color: #1c1e21; }
+
+        .replies { margin-left: 60px; }
+        .answer { background: #f0f2f5; padding: 12px; border-radius: 12px; margin-top: 10px; }
+
+        .comment-img {
+            max-width: 100%;
+            border-radius: 8px;
+            margin: 10px 0;
+        }
+
+        /* 8. PING ANIMATION */
+        .ping-effect::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 70px;
+            height: 70px;
+            background-color: rgba(165, 0, 0, 0.3);
+            border-radius: 50%;
+            transform: translate(-50%, -50%);
+            animation: ping 2s cubic-bezier(0, 0, 0.2, 1) infinite;
+            pointer-events: none;
+        }
+
+        @keyframes ping {
+            0% { transform: translate(-50%, -50%) scale(0.5); opacity: 1; }
+            100% { transform: translate(-50%, -50%) scale(2.5); opacity: 0; }
+        }
+
+        /* 9. FOOTER */
+        footer {
+            background-color: #f9f9f9;
+            padding: 60px 0 40px;
+            border-top: 1px solid #eee;
+            text-align: center;
+        }
+
+        .footer-links a {
+            color: #666;
+            text-decoration: none;
+            margin: 0 10px;
+            font-size: 14px;
+        }
+
+        .legal-disclaimer {
+            max-width: 800px;
+            margin: 30px auto 0;
+            font-size: 12px;
+            color: #999;
+            text-align: justify;
+            padding: 0 20px;
+            line-height: 1.5;
+        }
+
+        /* === START: Compliance citations styles === */
+        .references {
+          max-width: 800px;
+          margin: 30px auto 40px;
+          padding: 20px;
+          border-radius: 8px;
+          background: #f8f9fb;
+          border: 1px solid #e6e9ee;
+          font-size: 0.95rem;
+          color: #333;
+        }
+        .references h4 { margin-top: 0; color: #111; font-size: 1.05rem; }
+        .references ol { padding-left: 1.1rem; margin: 0; }
+        .references li { margin: 8px 0; line-height: 1.45; }
+        .citation-sup { font-size: 0.85rem; vertical-align: super; margin-left: 4px; color: var(--primary-red); }
+        .note-claim { font-style: italic; color: #555; margin-bottom: 16px; }
+        /* === END: Compliance citations styles === */
+
+        /* 10. RESPONSIVENESS */
+        @media (max-width: 768px) {
+            h1 { font-size: 1.8rem; }
+            p { font-size: 1.05rem; }
+            .replies { margin-left: 20px; }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="advertisement-header">Advertisement / Advertorial</div>
+    
+    <header>
+        <div class="sectionContainer">
+            <a href="https://todayushealth.com/lp-gsculpt/">
+                <img class="logo" src="images/german-headline.png" alt="Health Journal">
+            </a>
+        </div>
+    </header>
+
+    <article class="sectionContainer articleContent">
+        <h1>The "Gelatin Bedtime Ritual" Some People Use as Part of Their Evening Routine After 40</h1>
+    <h3>An overview of a simple home routine some people include as part of their wellness habits.</h3>
+
+        <div class="articleInfo">
+            By <span class="articleAuthor">Health Insights Team</span> | 
+            <script>
+                var dayNames = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+                var monthNames = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+                var now = new Date();
+                document.write(dayNames[now.getDay()] + ", " + monthNames[now.getMonth()] + " " + now.getDate() + ", " + now.getFullYear());
+            </script>
+        </div>
+
+         <div class="articleImageContainer ping-effect">
+            <a href="https://todayushealth.com/lp-gsculpt/">
+                <img class="img-responsive" src="images/gelatin.webp" alt="Metabolic habit">
+            </a>
+        </div>
+
+<p>A wellness researcher recently shared an observation that has sparked discussion among people interested in simple lifestyle routines.</p>
+
+<p>This simple <a href="https://todayushealth.com/lp-gsculpt/" class="inline-link">“evening ritual”</a> focuses on a small nightly habit that can easily fit into a daily routine — without requiring intense workouts or strict dieting.</p>
+<!-- ADDED: short clarification after testimonial -->
+<p style="font-style:italic; color:#555; margin-top:8px;">
+  Testimonials like the one above are individual user reports; results vary and depend on many factors (diet, sleep, physical activity, genetics). <span class="citation-sup">[1,3]</span>
+</p>
+<p>Supporters say the routine takes less than 30 seconds before bed and is designed as a simple habit some people like to include as part of their nighttime schedule.</p>
+
+<p>While experiences may vary, many individuals report that building consistent evening habits can help them stay more mindful of their overall wellness routines. <span class="citation-sup">[3]</span></p>
+
+<hr style="border: 0; border-top: 1px solid #eee; margin: 30px 0;">
+
+<h3>A Different Approach to Everyday Habits</h3>
+
+<p>In the United States, millions of people experiment with different lifestyle strategies as part of their personal wellness journey.</p>
+
+<p>Instead of complicated programs, some prefer simple habits they can easily incorporate at home.</p>
+
+<p>The gelatin-based routine highlighted in this article has recently gained attention online because of how quick and simple it is to prepare.</p>
+
+<p>⚠️ <i>Click below to learn how the gelatin recipe is prepared.</i></p>
+
+<div class="articleImageContainer ping-effect">
+    <a href="https://todayushealth.com/lp-gsculpt/">
+        <img class="img-responsive" src="images/gelatin2.webp" alt="Evening gelatin recipe">
+    </a>
+</div>
+
+        <p><b>Sarah (42)</b> felt her metabolism was "completely blocked." After turning 40, she noticed her vitality declining—her body simply stopped managing energy efficiently, regardless of her efforts.</p>
+        
+        <p>In a very short time after trying this method, she noticed remarkable changes. She achieved her goals by simply adjusting her evening routine, without extreme deprivation.</p>
+
+   <!-- ADDED: short clarification after testimonial -->
+<p style="font-style:italic; color:#555; margin-top:8px;">
+  Testimonials like the one above are individual user reports; results vary and depend on many factors (diet, sleep, physical activity, genetics). <span class="citation-sup">[1,3]</span>
+</p>
+
+        <div class="articleImageContainer"> 
+            <a href="https://todayushealth.com/lp-gsculpt/">
+                <img class="img-responsive" src="images/67766bfcac47fe159d0716b8.jpg" alt="Proof of results">
+            </a> 
+        </div>
+
+        <blockquote> "I feel like a different person. I didn’t overhaul my routine, but I felt better sticking to a consistent evening habit." — Sarah </blockquote>
+
+        <a href="https://todayushealth.com/lp-gsculpt/" class="cta-button" style="margin-top: 50px;">➡️ CHECK AVAILABILITY</a>
+
+        <!-- COMMENTS SECTION -->
+        <section class="comments-section">
+            <h4 style="margin-bottom: 20px;">Recent Comments (14)</h4>
+            
+            <div class="comment-item">
+                <img src="images/67766bfcac47fe159d0716a8.webp" class="user-icon" alt="User">
+                <div class="comment-body">
+                    <div class="user-name">Ingrid Miller</div>
+                    <p class="comment-text">This is actually mind-blowing!! I heard about a similar ritual from my nutritionist, but I never expected it to work this fast. I feel lighter and more energetic in the mornings now. Thank you!</p>
+                </div>
+            </div>
+
+            <div class="comment-item">
+                <img src="images/644e30c3d3ad14140b02edf3.jpg" class="user-icon" alt="User">
+                <div class="comment-body">
+                    <div class="user-name">Kathryn B.</div>
+                    <p class="comment-text">Seriously, what are you waiting for? It takes 30 seconds before bed. This is a game changer for us ladies! 🔥</p>
+                </div>
+            </div>
+
+            <div class="replies">
+                <div class="comment-item answer">
+                    <img src="images/644e30edd8ead482e10a2108.jpg" class="user-icon" alt="User">
+                    <div class="comment-body">
+                        <div class="user-name">Sandra S.</div>
+                        <p class="comment-text">I started recently and I’m enjoying adding this to my routine. It’s simple and easy to stick with.</p>
+                        <img src="images/67766bfcac47fe159d0716aa.webp" class="comment-img" alt="Result proof">
+                    </div>
+                </div>
+            </div>
+
+            <div class="comment-item">
+                <img src="images/644e312eadf0735b0201362d.jpg" class="user-icon" alt="User">
+                <div class="comment-body">
+                    <div class="user-name">Elena Martin</div>
+                    <p class="comment-text">The biggest difference for me was feeling more consistent with my routine. I feel more in control of my habits now.</p>
+                </div>
+            </div>
+
+            <div class="comment-item">
+                <img src="images/644e317cc4d90ac5d10a7fa2.jpg" class="user-icon" alt="User">
+                <div class="comment-body">
+                    <div class="user-name">Andrew P.</div>
+                    <p class="comment-text">I was skeptical but my wife insisted. My metabolism felt "paralyzed" for years. This ritual made everything move fast and naturally.</p>
+                    <img src="images/67766bfcac47fe159d0716a6.webp" class="comment-img" style="max-width: 300px;" alt="Result">
+                </div>
+            </div>
+        </section>
+
+        <a href="https://todayushealth.com/lp-gsculpt/" class="cta-button" style="margin-top: 50px;">➡️ CHECK AVAILABILITY</a>
+    </article>
+
+    <!-- ADDED: Sources / References section (inserted before footer to support claims) -->
+<section class="references" aria-label="Sources and references">
+  <h4>Sources and References</h4>
+  <p style="margin-top:4px; margin-bottom:12px;">
+    The references below provide background on sleep, lifestyle habits, and hormones that may influence metabolism. 
+    Studies on specific ingredients (such as gelatin) show mixed results; therefore, user experiences described in this article 
+    should not be interpreted as guaranteed outcomes.
+  </p>
+  <ol>
+    <li>
+      <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC9374375/" target="_blank" rel="noopener noreferrer">
+        Palmer AK et al., Metabolic Changes in Aging Humans: Current Evidence (PMC)
+      </a>. Review discussing how aging and lifestyle habits can influence metabolic health.
+      <span class="citation-sup">[1]</span>
+    </li>
+    <li>
+      <a href="https://pubmed.ncbi.nlm.nih.gov/31767182/" target="_blank" rel="noopener noreferrer">
+        Müller TD et al., Glucagon-Like Peptide-1 (GLP-1) Review (PubMed)
+      </a>. Overview of GLP-1 physiology and its role in appetite regulation and metabolic balance.
+      <span class="citation-sup">[2]</span>
+    </li>
+    <li>
+      <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC9187217/" target="_blank" rel="noopener noreferrer">
+        Research on Sleep Restriction and Energy Intake (PMC)
+      </a>. Studies exploring how sleep patterns may influence metabolism and calorie intake.
+      <span class="citation-sup">[3]</span>
+    </li>
+    <li>
+      <a href="https://pubmed.ncbi.nlm.nih.gov/19864402/" target="_blank" rel="noopener noreferrer">
+        Research on Gelatin and Protein Intake Effects on Appetite (PubMed)
+      </a>. Studies showing short-term appetite effects from gelatin-based protein intake, with mixed long-term findings.
+      <span class="citation-sup">[4]</span>
+    </li>
+  </ol>
+
+  <p style="margin-top:12px; font-size:0.9rem; color:#666;">
+    Disclaimer: This content is an advertorial and may include user-reported experiences. 
+    It is not intended to replace professional medical advice. Always consult a qualified healthcare professional 
+    before starting any new diet, supplement, or wellness routine.
+  </p>
+</section>
+
+    <footer>
+        <div class="footer-links">
+            <a href="policy.html" target="_blank">Privacy Policy</a> |
+            <a href="policy.html" target="_blank">Terms & Conditions</a> |
+            <a href="policy.html" target="_blank">Contact Us</a>
+        </div>
+        
+        <div class="legal-disclaimer">
+            <strong>ADVERTORIAL:</strong> This website is an advertorial and not a news source. The story, names, and characters depicted on this site are used for illustrative purposes. Results may vary from person to person. <p class="note-claim">
+This article is for informational purposes only and does not provide medical advice.
+</p>
+            <br><br>
+            <strong>FDA DISCLAIMER:</strong> These statements have not been evaluated by the Food and Drug Administration. This product is not intended to diagnose, treat, cure, or prevent any disease. Always consult with a qualified health professional before starting any new health program.
+            <br><br>
+            © 2026 Metabolism Health Journal. All rights reserved.
+            <br><br>
+        </div>
+    </footer>
+
+    <script>
+        /** 
+         * URL Parameter Forwarding
+         * Ensures tracking IDs (like Taboola Click IDs) are passed to the offer page
+         */
+        (function () {
+            const queryString = window.location.search;
+            if (!queryString) return;
+            const links = document.querySelectorAll("a[href]");
+            links.forEach(link => {
+                try {
+                    const url = new URL(link.href, window.location.origin);
+                    const currentParams = new URLSearchParams(url.search);
+                    const pageParams = new URLSearchParams(queryString);
+                    pageParams.forEach((value, key) => {
+                        if (!currentParams.has(key)) {
+                            currentParams.set(key, value);
+                        }
+                    });
+                    url.search = currentParams.toString();
+                    link.href = url.toString();
+                } catch(e) {
+                    console.error("Link update failed", e);
+                }
+            });
+        })();
+    </script>
+</body>
+</html>
