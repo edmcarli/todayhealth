@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+    <meta name="description" content="Journal des Stoffwechsels - Einblicke in aktuelle physiologische Forschung">
+    <title>Journal des Stoffwechsels</title>
+    
+    <!-- Required Script -->
+    <script type="text/javascript" src="https://bio.healthofthewillingman.com/pretrack.js"></script>
+
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/base.css" rel="stylesheet">
+    
+<style>
+    :root {
+        --primary-red: #a50000;
+        --cta-green: #28a745;
+        --text-main: #333;
+        --bg-light: #f8f9fa;
+    }
+
+    body {
+        margin: 0;
+        padding: 0;
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+        color: var(--text-main);
+        line-height: 1.6;
+        background-color: #fff;
+    }
+
+    .advertisement-header {
+        width: 100%;
+        text-align: center;
+        font-size: 11px;
+        color: #666;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        padding: 8px 0;
+        background: #f4f4f4;
+        border-bottom: 1px solid #ddd;
+    }
+
+    header {
+        width: 100%;
+        background-color: var(--primary-red);
+        padding: 15px 0;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+
+    .logo {
+        max-width: 320px;
+        height: auto;
+        display: block;
+        margin: 0 auto;
+    }
+
+    .sectionContainer {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 0 25px;
+        box-sizing: border-box;
+    }
+
+    .articleContent {
+        padding: 30px 0;
+    }
+
+    h1 {
+        font-size: 2.2rem;
+        font-weight: 800;
+        line-height: 1.2;
+        margin-bottom: 20px;
+        color: #000;
+    }
+
+    h3 {
+        font-size: 1.3rem;
+        color: #444;
+        line-height: 1.4;
+        margin-bottom: 25px;
+    }
+
+    .articleInfo {
+        border-top: 1px solid #eee;
+        border-bottom: 1px solid #eee;
+        padding: 15px 0;
+        margin-bottom: 25px;
+        font-size: 0.95rem;
+        color: #666;
+    }
+
+    .articleAuthor {
+        font-weight: bold;
+        color: var(--primary-red);
+    }
+
+    p {
+        font-size: 1.15rem !important;
+        margin-bottom: 1.8rem;
+    }
+
+    .img-responsive {
+        border-radius: 4px;
+        box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+        width: 100%;
+        height: auto;
+    }
+
+    blockquote {
+        background: #fff9f9;
+        border-left: 5px solid var(--primary-red);
+        padding: 20px;
+        font-style: italic;
+        margin: 30px 0;
+        font-size: 1.2rem;
+    }
+
+    button.cta {
+        background: linear-gradient(180deg, #be352b 0%, #a50000 100%);
+        color: #fff;
+        border: none;
+        font-size: 20px;
+        font-weight: 700;
+        padding: 18px 30px;
+        border-radius: 50px;
+        display: block;
+        margin: 40px auto;
+        cursor: pointer;
+        box-shadow: 0 6px 20px rgba(165, 0, 0, 0.3);
+        transition: transform 0.2s, box-shadow 0.2s;
+        max-width: 100%;
+        text-align: center;
+    }
+
+    button.cta:hover {
+        transform: scale(1.02);
+    }
+
+    .comments {
+        background: #fff;
+        padding: 20px 0;
+        margin-top: 40px;
+        border-top: 1px solid #eee;
+    }
+
+    .comment-wrapper {
+        margin-bottom: 10px;
+        padding-bottom: 10px;
+        border-bottom: 1px solid #f0f0f0;
+    }
+
+    .comment {
+        display: flex;
+        gap: 12px;
+        padding: 10px 0;
+        align-items: flex-start;
+    }
+
+    .comment .icon {
+        width: 48px;
+        height: 48px;
+        border-radius: 50%;
+        flex-shrink: 0;
+        object-fit: cover;
+    }
+
+    .comment-content {
+        flex: 1;
+    }
+
+    .comment-name {
+        font-weight: 700;
+        color: #000;
+        margin-bottom: 2px;
+        font-size: 0.95rem;
+    }
+
+    .comment-text {
+        font-size: 0.95rem !important;
+        line-height: 1.4;
+        color: #1c1e21;
+        margin: 0 !important;
+    }
+
+    .footer-section {
+        padding: 40px 0;
+        border-top: 1px solid #eee;
+        margin-top: 60px;
+        background-color: #fafafa;
+        text-align: center;
+    }
+
+    .scientific-sources {
+        font-size: 0.8rem;
+        color: #777;
+        margin-top: 30px;
+        padding: 20px;
+        background: #f9f9f9;
+        border-radius: 8px;
+        text-align: left;
+        line-height: 1.4;
+    }
+
+    @media (max-width: 768px) {
+        h1 { font-size: 1.8rem; }
+        .sectionContainer { padding: 0 20px; }
+    }
+</style>
+</head>
+
+<body>
+    <div class="advertisement-header">Anzeige / Advertorial</div>
+    <header>
+        <div class="sectionContainer">
+            <a href="http://dailyhealing.online/lp-sjaro">
+                <img class="logo" src="images/german-headline.png" alt="Journal des Stoffwechsels">
+            </a>
+        </div>
+    </header>
+
+    <div class="container sectionContainer articleContent">
+        <h1>Die „Gelatine-Würfel-Routine“: Neue Erkenntnisse zur nächtlichen Stoffwechsel-Unterstützung</h1>
+        <h3>Aktuelle Berichte untersuchen natürliche Wege zur Begleitung der körpereigenen Sättigungs- und Energieprozesse.</h3>
+<div class="articleInfo">
+    von <span class="articleAuthor">Redaktion Journal des Stoffwechsels</span> |
+    <span id="today-date"></span>
+    <p style="font-size:12px;color:#777;">
+Publisher & site operator: NX Saude e Ciencia LTDA.
+</p>
+
+
+</div>
+
+
+        <div class="articleImageContainer">
+            <a href="http://dailyhealing.online/lp-sjaro">
+                <img class="img-responsive" src="images/gelatin.webp" alt="Stoffwechsel-Routine Forschung">
+            </a>
+        </div>
+        
+        <br>
+        <p>In der modernen Ernährungsphysiologie gewinnen natürliche Ansätze zur Unterstützung des Wohlbefindens zunehmend an Bedeutung. Aktuelle Auswertungen befassen sich mit der Frage, wie gezielte Nährstoffkombinationen die körpereigenen Regenerationsphasen begleiten können.</p>
+        
+        <p>Diese einfache <a href="http://dailyhealing.online/lp-sjaro">“Gelatine-Würfel-Routine”</a> wird derzeit als begleitendes Abend-Ritual diskutiert. Der Fokus liegt hierbei auf der Nutzung physiologischer Synergien, <b>ohne dass extreme Diäten</b> im Vordergrund stehen.</p>
+        
+        <p>Das Ritual wird <b>kurz vor der Nachtruhe</b> durchgeführt und zielt darauf ab, die natürlichen Mechanismen der Botenstoffe <b>GLP-1 & GIP</b> anzusprechen. Diese Hormone sind wissenschaftlich anerkannt für ihre Rolle in der Sättigungsregulation und der Verwertung von Energiereserven.</p>
+        
+        <p>Fachberichte legen nahe, dass dieser Impuls den Körper dabei unterstützen kann, die natürlichen Stoffwechselabläufe während der <b>8 Stunden Schlaf</b> harmonisch zu fördern.</p>
+
+        <hr>
+
+        <h3>Physiologische Zusammenhänge</h3>
+        <p>Die Rolle von Inkretinhormonen für das Gleichgewicht im Energiestoffwechsel ist durch zahlreiche Studien belegt. Das Interesse an unkomplizierten Methoden für zu Hause wächst stetig, da viele Menschen nach Wegen suchen, ihre Vitalität auf natürliche Weise zu fördern, statt auf invasive Mittel zu setzen.</p>
+        
+        <p>💡 <i>Weitere Hintergründe zu dieser Routine und deren Anwendung finden Interessierte in der aktuellen Zusammenfassung.</i></p>
+
+        <div class="articleImageContainer">
+            <a href="http://dailyhealing.online/lp-sjaro">
+                <img class="img-responsive" src="images/gela.jpg" alt="Zutatenanalyse">
+            </a>
+        </div>
+
+        <p><b>Persönlicher Erfahrungsbericht: Petra (42)</b> berichtet von einer Phase, in der sie sich in ihrem Körper nicht mehr vollkommen wohlfühlte. Sie suchte nach einer Möglichkeit, ihren Körper bei der Verwertung von Energie zu unterstützen. Durch die regelmäßige Anwendung dieser Routine am Abend fand sie zu einer neuen Balance in ihrem Alltag.</p>
+        
+        <p>Sie konnte ihre persönlichen Wohlfühlziele fördern – durch eine gezielte Unterstützung unmittelbar vor dem Schlafengehen, ganz ohne ihren gesamten Lebensstil drastisch ändern zu müssen.</p>
+
+        <blockquote> „Ich fühle mich deutlich vitaler und habe das Gefühl, meinem Körper die richtige Unterstützung für die Nacht zu geben.“ — Petra </blockquote>
+
+        <a href="http://dailyhealing.online/lp-sjaro" target="_blank" style="text-decoration: none;">
+            <button class="cta">➡️ Verfügbarkeit & Details prüfen</button>
+        </a>
+
+        <div class="comments">
+            <div class="comment-wrapper">
+                <div class="comment">
+                    <img src="images/67766bfcac47fe159d0716a8.webp" class="icon" alt="Nutzer">
+                    <div class="comment-content">
+                        <p class="comment-name">Ingrid Müller</p>
+                        <p class="comment-text">Ein sehr interessanter und sachlicher Beitrag. Ich habe mich bereits mit dem Prinzip der Sättigungshormone befasst und finde diesen Ansatz zur Nachtruhe sehr schlüssig.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="comment-wrapper">
+                <div class="comment">
+                    <img src="images/644e30c3d3ad14140b02edf3.jpg" class="icon" alt="Nutzer">
+                    <div class="comment-content">
+                        <p class="comment-name">Kathrin Becker</p>
+                        <p class="comment-text">Ich nutze diese Routine nun seit einigen Tagen. Es ist wirklich unkompliziert und lässt sich perfekt in den Abend integrieren.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="comment-wrapper">
+                <div class="comment">
+                    <img src="images/644e317cc4d90ac5d10a7fa2.jpg" class="icon" alt="Nutzer">
+                    <div class="comment-content">
+                        <p class="comment-name">Andreas P.</p>
+                        <p class="comment-text">Spannender Forschungsansatz zur Stoffwechselbegleitung. Für mich ist es eine gute Ergänzung zu meinem bewussten Lebensstil geworden.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- SCIENTIFIC SOURCES (MANDATORY FOR DACH COMPLIANCE) -->
+        <div class="scientific-sources">
+            <strong>Wissenschaftliche Quellen & Referenzen:</strong><br>
+            1. Holst, J. J. (2007). The Physiology of Glucagon-like Peptide 1. <i>Physiological Reviews</i>, 87(4), 1409-1439.<br>
+            2. Baggio, L. L., & Drucker, D. J. (2007). Biology of Incretins: GLP-1 and GIP. <i>Gastroenterology</i>, 132(6), 2131-2157.<br>
+            3. Müller, T. D., et al. (2019). The Incretin System and its Role in Energy Homeostasis. <i>Molecular Metabolism</i>, 30, 72-94.<br>
+            4. Seino, Y., et al. (2010). GIP and GLP-1: Roles in lipid metabolism. <i>Journal of Diabetes Investigation</i>, 1(1-2), 8-22.
+        </div>
+        
+        <a href="http://dailyhealing.online/lp-sjaro" target="_blank" style="text-decoration: none;">
+            <button class="cta">➡️ Verfügbarkeit & Details prüfen</button>
+        </a>
+
+        <div class="footer-section">
+            <p style="font-size:12px;color:#777;text-align:center;">
+This website is operated by NX Saude e Ciencia LTDA.  
+Full legal notice, company details, refund policy and privacy policy are available <a href="policy.html" target="_blank">here</a>.
+</p>
+
+            <div class="footer-links">
+               <a href="policy.html" target="_blank">Legal Notice / Imprint (Impressum)</a> |
+<a href="policy.html#widerruf" target="_blank">Refund & Withdrawal Policy</a>
+ |
+<a href="policy.html#datenschutz" target="_blank">Privacy Policy</a>
+
+            </div>
+            <div style="max-width: 800px; margin: 20px auto; font-size: 0.75rem; color: #999; text-align: justify; line-height: 1.4; padding: 0 20px;">
+                <strong>Wichtiger Hinweis:</strong> Dies ist ein Advertorial und kein journalistischer Artikel. Die hier vorgestellten Inhalte dienen der Information und ersetzen keine medizinische Beratung. Individuelle Ergebnisse können variieren. Nahrungsergänzungsmittel sind kein Ersatz für eine ausgewogene und abwechslungsreiche Ernährung sowie eine gesunde Lebensweise.
+                <br><br>
+                © 2025 <strong>NX Saude e Ciencia LTDA</strong>. <br>
+                Verantwortlich: Nilma Ferreira | Kontakt: +55 82 996138573 <br>
+                CNPJ: 45.093.768/0001-95. Alle Rechte vorbehalten.
+                <p style="font-size:11px;color:#888;">
+Support: contato@fitlifeus.online | +55 82 996138573
+</p>
+
+            </div>
+
+        </div>
+    </div>
+
+
+<script>
+    document.getElementById('today-date').textContent = new Date().toLocaleDateString('de-DE', { 
+        weekday: 'long', day: 'numeric', month: 'long', year: 'numeric' 
+    });
+</script>
+
+    
+</body>
+</html>

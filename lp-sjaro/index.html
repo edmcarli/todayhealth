@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Slimjara™ | Aktivieren Sie Ihren Stoffwechsel natürlich</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=Lexend:wght@700;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --metabolic-green: linear-gradient(90deg, #079968 0%, #29af29 100%);
+            --orange-btn: linear-gradient(180deg, #ffde59 0%, #ff914d 100%);
+            --green-btn: linear-gradient(180deg, #00bf63 0%, #7ed957 100%);
+            --text-main: #1e293b;
+            --bg-body: #f8fafc;
+            --white: #ffffff;
+        }
+
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { font-family: 'Inter', sans-serif; color: var(--text-main); background: var(--bg-body); line-height: 1.6; }
+
+        .ad-disclosure { background: #fff; text-align: center; font-size: 11px; padding: 10px; color: #94a3b8; text-transform: uppercase; letter-spacing: 1px; font-weight: 700; border-bottom: 1px solid #e2e8f0; }
+
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+
+        nav { background: #fff; padding: 15px 0; box-shadow: 0 2px 10px rgba(0,0,0,0.05); position: sticky; top: 0; z-index: 1000; }
+        .nav-flex { display: flex; justify-content: space-between; align-items: center; }
+        .logo { font-family: 'Lexend', sans-serif; font-size: 26px; font-weight: 800; color: #0f172a; text-decoration: none; }
+        .logo span { color: #29af29; }
+        .nav-btn { background: var(--metabolic-green); color: #fff; padding: 10px 20px; border-radius: 50px; text-decoration: none; font-weight: 700; font-size: 14px; }
+
+        .editorial { background: var(--white); padding: 60px 0; text-align: center; }
+        .editorial h1 { font-family: 'Lexend', sans-serif; font-size: clamp(32px, 5vw, 42px); line-height: 1.1; margin-bottom: 20px; color: #0f172a; }
+        .editorial p { font-size: 20px; color: #64748b; max-width: 850px; margin: 0 auto 40px; }
+
+        .steps-section { padding: 60px 0; background: #fff; border-top: 1px solid #eee; text-align: center;}
+        .steps-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px; margin-top: 40px; }
+        .step-card { padding: 20px; }
+        .step-num { width: 40px; height: 40px; background: var(--metabolic-green); color: #fff; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 15px; font-weight: 800; }
+
+        .pricing-section { padding: 60px 0; }
+        .grid { display: flex; flex-wrap: wrap; justify-content: center; gap: 20px; align-items: stretch; }
+        .card { background: #fbfbfb; border-radius: 25px; width: 360px; box-shadow: 0 20px 40px rgba(0,0,0,0.05); text-align: center; border: 5px solid #fff; display: flex; flex-direction: column; position: relative; }
+        .card.featured { border-color: #ffc107; background: #eaf0e3; transform: scale(1.03); z-index: 10; }
+        .card-head { background: var(--metabolic-green); padding: 25px; color: #fff; border-radius: 18px 18px 0 0; }
+        .card-head h3 { font-size: 28px; font-weight: 800; }
+        .card-head p { font-size: 18px; font-weight: 600; opacity: 0.9; }
+        .img-box { padding: 30px; min-height: 250px; display: flex; align-items: center; justify-content: center; }
+        .img-box img { max-width: 90%; height: auto; }
+        .price-box { display: flex; justify-content: center; align-items: center; margin: 10px 0; }
+        .symbol { font-size: 36px; font-weight: 800; align-self: flex-start; margin-top: 15px; }
+        .price { font-size: 74px; font-weight: 700; font-family: 'Lexend'; line-height: 1; }
+        .label { font-size: 18px; font-weight: 800; text-align: left; margin-left: 8px; line-height: 1.1; }
+        .benefits { text-align: left; padding: 20px 40px; border-top: 1px solid #eee; }
+        .benefit { font-size: 16px; font-weight: 700; margin-bottom: 10px; display: flex; align-items: center; }
+        .benefit.orange { color: #cb6602; }
+        .check { width: 18px; height: 18px; background: #333; color: #fff; border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; font-size: 10px; margin-right: 12px; }
+        .check.orange-bg { background: #cb6602; }
+        .btn-order { display: block; margin: 15px 30px; padding: 18px; border-radius: 12px; text-decoration: none; font-weight: 900; font-size: 22px; transition: 0.3s; text-align: center; }
+        .btn-orange { background: var(--orange-btn); color: #000; }
+        .btn-green { background: var(--green-btn); color: #fff; }
+        .payment { width: 180px; margin: 10px auto; display: block; }
+        .totals { font-size: 22px; font-weight: 700; margin: 10px 0; }
+        .totals strike { color: red; margin-right: 5px; }
+        .free-ship { font-size: 18px; font-weight: 800; color: #000; padding-bottom: 20px; }
+        .free-ship span { color: #cb6602; }
+
+        .faq-section { padding: 80px 0; background: #fff; }
+        .faq-grid { max-width: 800px; margin: 40px auto 0; text-align: left; }
+        .faq-item { margin-bottom: 25px; border-bottom: 1px solid #eee; padding-bottom: 15px; }
+        .faq-item h4 { font-family: 'Lexend', sans-serif; color: #0f172a; margin-bottom: 10px; }
+
+        footer { background: #0f172a; color: #94a3b8; padding: 60px 20px; text-align: center; font-size: 13px; }
+        .footer-links a { color: #fff; margin: 0 15px; text-decoration: underline; opacity: 0.7; }
+        .disclaimer-box { max-width: 1000px; margin: 40px auto; padding: 25px; border: 1px solid #1e293b; text-align: left; line-height: 1.8; border-radius: 12px; }
+
+        @media (max-width: 768px) {
+            .grid { gap: 40px; }
+            .card.featured { transform: scale(1); }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="ad-disclosure">Anzeige / Werbeinhalt</div>
+
+    <nav>
+        <div class="container nav-flex">
+            <a href="#order" class="logo">Slim<span>jara™</span></a>
+            <a href="#order" class="nav-btn">JETZT AKTIVIEREN</a>
+        </div>
+    </nav>
+
+    <div class="editorial">
+        <div class="container">
+            <h1>Entfesseln Sie Ihren Stoffwechsel mit Slimjara™</h1>
+            <p>Slimjara™ nutzt die thermogene Kraft von hochkonzentriertem Ingwer-Extrakt, um die natürliche Fettverbrennung und Ihr allgemeines Wohlbefinden synergetisch zu unterstützen.</p>
+        </div>
+    </div>
+
+    <section class="steps-section">
+        <div class="container">
+            <h2 style="font-family: 'Lexend'; font-size: 32px;">Das 30-Sekunden-Abendritual</h2>
+            <div class="steps-grid">
+                <div class="step-card">
+                    <div class="step-num">1</div>
+                    <h4>Einnehmen</h4>
+                    <p>Nehmen Sie Slimjara™ einfach direkt oder in etwas Wasser kurz vor dem Schlafengehen ein.</p>
+                </div>
+                <div class="step-card">
+                    <div class="step-num">2</div>
+                    <h4>Aktivieren</h4>
+                    <p>Die Wirkstoffe regen Ihre körpereigene GLP-1-Produktion über Nacht auf natürliche Weise an.</p>
+                </div>
+                <div class="step-card">
+                    <div class="step-num">3</div>
+                    <h4>Aufwachen</h4>
+                    <p>Starten Sie mit mehr Energie und einem aktivierten Stoffwechsel in den neuen Tag.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="pricing-section" id="order">
+        <div class="container">
+            <div class="grid">
+                
+                <!-- 2 FLASCHEN -->
+                <div class="card">
+                    <div class="card-head"><h3>TESTPAKET</h3><p>60 TAGE, 2 DOSEN</p></div>
+                    <div class="img-box">
+                        <img src="images/2bottles.webp" onerror="this.src='https://via.placeholder.com/200x250?text=2+FLASCHEN'" alt="Slimjara 2 Flaschen">
+                    </div>
+                    <div class="price-box">
+                        <span class="symbol">€</span><span class="price">79</span><span class="label">pro<br>Dose</span>
+                    </div>
+                    <div class="benefits">
+                        <div class="benefit">+ 9,99 € Versand</div>
+                        <div class="benefit orange"><span class="check orange-bg">✓</span> Sie sparen 59 €</div>
+                        <div class="benefit"><span class="check">✓</span> 180 Tage Geld-zurück-Garantie</div>
+                        <div class="benefit"><span class="check">✓</span> Optimale Start-Dosis</div>
+                    </div>
+                    <div class="totals">Gesamt: <strike>217 €</strike> 158 €</div>
+                    <a href="https://www.checkout-ds24.com/product/663681?aff=NxSaudeeciencia" class="btn-order btn-orange">IN DEN WARENKORB</a>
+                    <img src="images/ksCaqy2149442_1.png" class="payment" alt="Zahlungsmethoden">
+                </div>
+
+                <!-- 6 FLASCHEN (EMPFEHLUNG) -->
+                <div class="card featured">
+                    <div class="card-head"><h3>BESTER DEAL!</h3><p>180 TAGE, 6 DOSEN</p></div>
+                    <div class="img-box">
+                        <img src="images/6bottles.webp" onerror="this.src='https://via.placeholder.com/220x250?text=6+FLASCHEN'" alt="Slimjara 6 Flaschen">
+                    </div>
+                    <div class="price-box">
+                        <span class="symbol">€</span><span class="price">49</span><span class="label">pro<br>Dose</span>
+                    </div>
+                    <div class="benefits">
+                        <div class="benefit orange"><span class="check orange-bg">✓</span> Sie sparen 294 €</div>
+                        <div class="benefit"><span class="check">✓</span> 180 Tage Geld-zurück-Garantie</div>
+                        <div class="benefit"><span class="check">✓</span> 50 % RABATT INKLUSIVE</div>
+                        <div class="benefit"><span class="check">✓</span> + GRATIS E-BOOKS</div>
+                    </div>
+                    <div class="totals">Gesamt: <strike>588 €</strike> 294 €</div>
+                    <a href="https://www.checkout-ds24.com/product/651021?aff=NxSaudeeciencia" class="btn-order btn-green">IN DEN WARENKORB</a>
+                    <img src="images/ksCaqy2149442.png" class="payment" alt="Zahlungsmethoden">
+                    <div class="free-ship">+ <span>GRATIS</span> VERSAND</div>
+                </div>
+
+                <!-- 3 FLASCHEN -->
+                <div class="card">
+                    <div class="card-head"><h3>VORTEILSPAKET</h3><p>90 TAGE, 3 DOSEN</p></div>
+                    <div class="img-box">
+                        <img src="images/3bottles.webp" onerror="this.src='https://via.placeholder.com/200x250?text=3+FLASCHEN'" alt="Slimjara 3 Flaschen">
+                    </div>
+                    <div class="price-box">
+                        <span class="symbol">€</span><span class="price">69</span><span class="label">pro<br>Dose</span>
+                    </div>
+                    <div class="benefits">
+                        <div class="benefit orange"><span class="check orange-bg">✓</span> Sie sparen 87 €</div>
+                        <div class="benefit"><span class="check">✓</span> 180 Tage Geld-zurück-Garantie</div>
+                        <div class="benefit"><span class="check">✓</span> Beliebteste Wahl</div>
+                    </div>
+                    <div class="totals">Gesamt: <strike>294 €</strike> 207 €</div>
+                    <a href="https://www.checkout-ds24.com/product/651019?aff=NxSaudeeciencia" class="btn-order btn-orange">IN DEN WARENKORB</a>
+                    <img src="images/ksCaqy2149442_2.png" class="payment" alt="Zahlungsmethoden">
+                    <div class="free-ship">+ <span>GRATIS</span> VERSAND</div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="container">
+            <h2 style="font-family:'Lexend';text-align:center;">Inhaltsstoffe & Fakten</h2>
+            <div class="disclaimer-box">
+                <p><strong>Produkttyp:</strong> Nahrungsergänzungsmittel (Flüssig-Extrakt)</p>
+                <p><strong>Portionsgröße:</strong> 1ml (ca. 20 Tropfen)</p>
+                <p><strong>Portionen pro Packung:</strong> 30</p>
+                <hr style="margin:20px 0">
+                <p><strong>Hauptwirkstoff:</strong> Aktivierter Ingwer-Komplex (Zingiber officinale) – reich an Gingerolen und Shogaolen zur Unterstützung der Thermogenese.</p>
+                <p><strong>Weitere Inhaltsstoffe:</strong> Gereinigtes Wasser, Natürliches Aroma, pflanzliches Glycerin, Stevia-Extrakt.</p>
+                <p style="font-size:14px;opacity:.7;margin-top:15px">Hergestellt in den USA in einer GMP-zertifizierten Anlage. 100% Vegan & Ohne Gentechnik.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="faq-section">
+        <div class="container">
+            <h2 style="font-family: 'Lexend'; font-size: 32px; text-align: center;">Häufig gestellte Fragen</h2>
+            <div class="faq-grid">
+                <div class="faq-item">
+                    <h4>Warum Ingwer-Extrakt?</h4>
+                    <p>Ingwer ist wissenschaftlich bekannt dafür, die Körpertemperatur minimal zu erhöhen (Thermogenese), was den Kalorienverbrauch im Ruhezustand fördern kann.</p>
+                </div>
+                <div class="faq-item">
+                    <h4>Wann sollte ich Slimjara™ einnehmen?</h4>
+                    <p>Für beste Ergebnisse empfehlen wir die Einnahme am Abend, um die Stoffwechselprozesse während der nächtlichen Fastenphase zu unterstützen.</p>
+                </div>
+                <div class="faq-item">
+                    <h4>Bieten Sie eine Garantie?</h4>
+                    <p>Ja. Wir sind so überzeugt von Slimjara™, dass wir Ihnen eine volle 180-Tage-Geld-zurück-Garantie geben. Ohne Wenn und Aber.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-links">
+                <a href="policy.html">Datenschutz</a>
+                <a href="policy.html">Impressum</a>
+                <a href="policy.html">Kontakt</a>
+            </div>
+
+            <div class="disclaimer-box">
+                <p><strong>Wichtiger Hinweis:</strong> Nahrungsergänzungsmittel sind kein Ersatz für eine ausgewogene und abwechslungsreiche Ernährung sowie eine gesunde Lebensweise. Die angegebene empfohlene tägliche Verzehrmenge darf nicht überschritten werden. Außerhalb der Reichweite von kleinen Kindern aufbewahren.</p>
+            </div>
+
+            <div style="margin-top: 40px; color: #fff; line-height: 1.6;">
+                <strong>Betreiber der Website:</strong><br>
+                NX Saude e Ciencia LTDA<br>
+                Avenida Menino Marcelo, 9603, Maceió - AL, 57045-660, Brasilien<br><br>
+                <strong>Gesetzliche Vertreterin (CEO):</strong> Nilma Ferreira<br>
+                <strong>Kontakt:</strong> +55 82 996138573 | support@fitlifeus.online<br>
+                <strong>Register:</strong> CNPJ: 45.093.768/0001-95
+            </div>
+            
+            <p style="margin-top:20px; opacity:0.3;">&copy; 2025 Slimjara. Alle Rechte vorbehalten.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
