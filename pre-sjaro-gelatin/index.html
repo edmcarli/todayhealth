@@ -2,356 +2,300 @@
 <html lang="de">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
-    <meta name="description" content="Journal des Stoffwechsels - Einblicke in aktuelle physiologische Forschung">
-    <title>Journal des Stoffwechsels</title>
-    
-    <!-- Required Script -->
-    <script type="text/javascript" src="https://bio.healthofthewillingman.com/pretrack.js"></script>
-
-    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link href="css/base.css" rel="stylesheet">
-    
-<style>
-    :root {
-        --primary-red: #a50000;
-        --cta-green: #28a745;
-        --text-main: #333;
-        --bg-light: #f8f9fa;
-    }
-
-    body {
-        margin: 0;
-        padding: 0;
-        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-        color: var(--text-main);
-        line-height: 1.6;
-        background-color: #fff;
-    }
-
-    .advertisement-header {
-        width: 100%;
-        text-align: center;
-        font-size: 11px;
-        color: #666;
-        text-transform: uppercase;
-        letter-spacing: 1px;
-        padding: 8px 0;
-        background: #f4f4f4;
-        border-bottom: 1px solid #ddd;
-    }
-
-    header {
-        width: 100%;
-        background-color: var(--primary-red);
-        padding: 15px 0;
-        box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-    }
-
-    .logo {
-        max-width: 320px;
-        height: auto;
-        display: block;
-        margin: 0 auto;
-    }
-
-    .sectionContainer {
-        max-width: 800px;
-        margin: 0 auto;
-        padding: 0 25px;
-        box-sizing: border-box;
-    }
-
-    .articleContent {
-        padding: 30px 0;
-    }
-
-    h1 {
-        font-size: 2.2rem;
-        font-weight: 800;
-        line-height: 1.2;
-        margin-bottom: 20px;
-        color: #000;
-    }
-
-    h3 {
-        font-size: 1.3rem;
-        color: #444;
-        line-height: 1.4;
-        margin-bottom: 25px;
-    }
-
-    .articleInfo {
-        border-top: 1px solid #eee;
-        border-bottom: 1px solid #eee;
-        padding: 15px 0;
-        margin-bottom: 25px;
-        font-size: 0.95rem;
-        color: #666;
-    }
-
-    .articleAuthor {
-        font-weight: bold;
-        color: var(--primary-red);
-    }
-
-    p {
-        font-size: 1.15rem !important;
-        margin-bottom: 1.8rem;
-    }
-
-    .img-responsive {
-        border-radius: 4px;
-        box-shadow: 0 4px 15px rgba(0,0,0,0.08);
-        width: 100%;
-        height: auto;
-    }
-
-    blockquote {
-        background: #fff9f9;
-        border-left: 5px solid var(--primary-red);
-        padding: 20px;
-        font-style: italic;
-        margin: 30px 0;
-        font-size: 1.2rem;
-    }
-
-    button.cta {
-        background: linear-gradient(180deg, #be352b 0%, #a50000 100%);
-        color: #fff;
-        border: none;
-        font-size: 20px;
-        font-weight: 700;
-        padding: 18px 30px;
-        border-radius: 50px;
-        display: block;
-        margin: 40px auto;
-        cursor: pointer;
-        box-shadow: 0 6px 20px rgba(165, 0, 0, 0.3);
-        transition: transform 0.2s, box-shadow 0.2s;
-        max-width: 100%;
-        text-align: center;
-    }
-
-    button.cta:hover {
-        transform: scale(1.02);
-    }
-
-    .comments {
-        background: #fff;
-        padding: 20px 0;
-        margin-top: 40px;
-        border-top: 1px solid #eee;
-    }
-
-    .comment-wrapper {
-        margin-bottom: 10px;
-        padding-bottom: 10px;
-        border-bottom: 1px solid #f0f0f0;
-    }
-
-    .comment {
-        display: flex;
-        gap: 12px;
-        padding: 10px 0;
-        align-items: flex-start;
-    }
-
-    .comment .icon {
-        width: 48px;
-        height: 48px;
-        border-radius: 50%;
-        flex-shrink: 0;
-        object-fit: cover;
-    }
-
-    .comment-content {
-        flex: 1;
-    }
-
-    .comment-name {
-        font-weight: 700;
-        color: #000;
-        margin-bottom: 2px;
-        font-size: 0.95rem;
-    }
-
-    .comment-text {
-        font-size: 0.95rem !important;
-        line-height: 1.4;
-        color: #1c1e21;
-        margin: 0 !important;
-    }
-
-    .footer-section {
-        padding: 40px 0;
-        border-top: 1px solid #eee;
-        margin-top: 60px;
-        background-color: #fafafa;
-        text-align: center;
-    }
-
-    .scientific-sources {
-        font-size: 0.8rem;
-        color: #777;
-        margin-top: 30px;
-        padding: 20px;
-        background: #f9f9f9;
-        border-radius: 8px;
-        text-align: left;
-        line-height: 1.4;
-    }
-
-    @media (max-width: 768px) {
-        h1 { font-size: 1.8rem; }
-        .sectionContainer { padding: 0 20px; }
-    }
-</style>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stoffwechsel-Blockade ab 40: 3 Lebensmittel, die Sie meiden sollten</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        .prose p { margin-bottom: 1.25rem; line-height: 1.75; color: #374151; }
+        .sticky-cta { animation: slideUp 0.5s ease-out; }
+        @keyframes slideUp { from { transform: translateY(100%); } to { transform: translateY(0); } }
+    </style>
 </head>
+<body class="bg-gray-50 text-gray-900 antialiased">
 
-<body>
-    <div class="advertisement-header">Anzeige / Advertorial</div>
-    <header>
-        <div class="sectionContainer">
-            <a href="http://dailyhealing.online/lp-sjaro">
-                <img class="logo" src="images/german-headline.png" alt="Journal des Stoffwechsels">
-            </a>
-        </div>
-    </header>
-
-    <div class="container sectionContainer articleContent">
-        <h1>Die „Gelatine-Würfel-Routine“: Neue Erkenntnisse zur nächtlichen Stoffwechsel-Unterstützung</h1>
-        <h3>Aktuelle Berichte untersuchen natürliche Wege zur Begleitung der körpereigenen Sättigungs- und Energieprozesse.</h3>
-<div class="articleInfo">
-    von <span class="articleAuthor">Redaktion Journal des Stoffwechsels</span> |
-    <span id="today-date"></span>
-    <p style="font-size:12px;color:#777;">
-Publisher & site operator: NX Saude e Ciencia LTDA.
-</p>
-
-
-</div>
-
-
-        <div class="articleImageContainer">
-            <a href="http://dailyhealing.online/lp-sjaro">
-                <img class="img-responsive" src="images/gelatin.webp" alt="Stoffwechsel-Routine Forschung">
-            </a>
-        </div>
-        
-        <br>
-        <p>In der modernen Ernährungsphysiologie gewinnen natürliche Ansätze zur Unterstützung des Wohlbefindens zunehmend an Bedeutung. Aktuelle Auswertungen befassen sich mit der Frage, wie gezielte Nährstoffkombinationen die körpereigenen Regenerationsphasen begleiten können.</p>
-        
-        <p>Diese einfache <a href="http://dailyhealing.online/lp-sjaro">“Gelatine-Würfel-Routine”</a> wird derzeit als begleitendes Abend-Ritual diskutiert. Der Fokus liegt hierbei auf der Nutzung physiologischer Synergien, <b>ohne dass extreme Diäten</b> im Vordergrund stehen.</p>
-        
-        <p>Das Ritual wird <b>kurz vor der Nachtruhe</b> durchgeführt und zielt darauf ab, die natürlichen Mechanismen der Botenstoffe <b>GLP-1 & GIP</b> anzusprechen. Diese Hormone sind wissenschaftlich anerkannt für ihre Rolle in der Sättigungsregulation und der Verwertung von Energiereserven.</p>
-        
-        <p>Fachberichte legen nahe, dass dieser Impuls den Körper dabei unterstützen kann, die natürlichen Stoffwechselabläufe während der <b>8 Stunden Schlaf</b> harmonisch zu fördern.</p>
-
-        <hr>
-
-        <h3>Physiologische Zusammenhänge</h3>
-        <p>Die Rolle von Inkretinhormonen für das Gleichgewicht im Energiestoffwechsel ist durch zahlreiche Studien belegt. Das Interesse an unkomplizierten Methoden für zu Hause wächst stetig, da viele Menschen nach Wegen suchen, ihre Vitalität auf natürliche Weise zu fördern, statt auf invasive Mittel zu setzen.</p>
-        
-        <p>💡 <i>Weitere Hintergründe zu dieser Routine und deren Anwendung finden Interessierte in der aktuellen Zusammenfassung.</i></p>
-
-        <div class="articleImageContainer">
-            <a href="http://dailyhealing.online/lp-sjaro">
-                <img class="img-responsive" src="images/gela.jpg" alt="Zutatenanalyse">
-            </a>
-        </div>
-
-        <p><b>Persönlicher Erfahrungsbericht: Petra (42)</b> berichtet von einer Phase, in der sie sich in ihrem Körper nicht mehr vollkommen wohlfühlte. Sie suchte nach einer Möglichkeit, ihren Körper bei der Verwertung von Energie zu unterstützen. Durch die regelmäßige Anwendung dieser Routine am Abend fand sie zu einer neuen Balance in ihrem Alltag.</p>
-        
-        <p>Sie konnte ihre persönlichen Wohlfühlziele fördern – durch eine gezielte Unterstützung unmittelbar vor dem Schlafengehen, ganz ohne ihren gesamten Lebensstil drastisch ändern zu müssen.</p>
-
-        <blockquote> „Ich fühle mich deutlich vitaler und habe das Gefühl, meinem Körper die richtige Unterstützung für die Nacht zu geben.“ — Petra </blockquote>
-
-        <a href="http://dailyhealing.online/lp-sjaro" target="_blank" style="text-decoration: none;">
-            <button class="cta">➡️ Verfügbarkeit & Details prüfen</button>
-        </a>
-
-        <div class="comments">
-            <div class="comment-wrapper">
-                <div class="comment">
-                    <img src="images/67766bfcac47fe159d0716a8.webp" class="icon" alt="Nutzer">
-                    <div class="comment-content">
-                        <p class="comment-name">Ingrid Müller</p>
-                        <p class="comment-text">Ein sehr interessanter und sachlicher Beitrag. Ich habe mich bereits mit dem Prinzip der Sättigungshormone befasst und finde diesen Ansatz zur Nachtruhe sehr schlüssig.</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="comment-wrapper">
-                <div class="comment">
-                    <img src="images/644e30c3d3ad14140b02edf3.jpg" class="icon" alt="Nutzer">
-                    <div class="comment-content">
-                        <p class="comment-name">Kathrin Becker</p>
-                        <p class="comment-text">Ich nutze diese Routine nun seit einigen Tagen. Es ist wirklich unkompliziert und lässt sich perfekt in den Abend integrieren.</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="comment-wrapper">
-                <div class="comment">
-                    <img src="images/644e317cc4d90ac5d10a7fa2.jpg" class="icon" alt="Nutzer">
-                    <div class="comment-content">
-                        <p class="comment-name">Andreas P.</p>
-                        <p class="comment-text">Spannender Forschungsansatz zur Stoffwechselbegleitung. Für mich ist es eine gute Ergänzung zu meinem bewussten Lebensstil geworden.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- SCIENTIFIC SOURCES (MANDATORY FOR DACH COMPLIANCE) -->
-        <div class="scientific-sources">
-            <strong>Wissenschaftliche Quellen & Referenzen:</strong><br>
-            1. Holst, J. J. (2007). The Physiology of Glucagon-like Peptide 1. <i>Physiological Reviews</i>, 87(4), 1409-1439.<br>
-            2. Baggio, L. L., & Drucker, D. J. (2007). Biology of Incretins: GLP-1 and GIP. <i>Gastroenterology</i>, 132(6), 2131-2157.<br>
-            3. Müller, T. D., et al. (2019). The Incretin System and its Role in Energy Homeostasis. <i>Molecular Metabolism</i>, 30, 72-94.<br>
-            4. Seino, Y., et al. (2010). GIP and GLP-1: Roles in lipid metabolism. <i>Journal of Diabetes Investigation</i>, 1(1-2), 8-22.
-        </div>
-        
-        <a href="http://dailyhealing.online/lp-sjaro" target="_blank" style="text-decoration: none;">
-            <button class="cta">➡️ Verfügbarkeit & Details prüfen</button>
-        </a>
-
-        <div class="footer-section">
-            <p style="font-size:12px;color:#777;text-align:center;">
-This website is operated by NX Saude e Ciencia LTDA.  
-Full legal notice, company details, refund policy and privacy policy are available <a href="policy.html" target="_blank">here</a>.
-</p>
-
-            <div class="footer-links">
-               <a href="policy.html" target="_blank">Legal Notice / Imprint (Impressum)</a> |
-<a href="policy.html#widerruf" target="_blank">Refund & Withdrawal Policy</a>
- |
-<a href="policy.html#datenschutz" target="_blank">Privacy Policy</a>
-
-            </div>
-            <div style="max-width: 800px; margin: 20px auto; font-size: 0.75rem; color: #999; text-align: justify; line-height: 1.4; padding: 0 20px;">
-                <strong>Wichtiger Hinweis:</strong> Dies ist ein Advertorial und kein journalistischer Artikel. Die hier vorgestellten Inhalte dienen der Information und ersetzen keine medizinische Beratung. Individuelle Ergebnisse können variieren. Nahrungsergänzungsmittel sind kein Ersatz für eine ausgewogene und abwechslungsreiche Ernährung sowie eine gesunde Lebensweise.
-                <br><br>
-                © 2025 <strong>NX Saude e Ciencia LTDA</strong>. <br>
-                Verantwortlich: Nilma Ferreira | Kontakt: +55 82 996138573 <br>
-                CNPJ: 45.093.768/0001-95. Alle Rechte vorbehalten.
-                <p style="font-size:11px;color:#888;">
-Support: contato@fitlifeus.online | +55 82 996138573
-</p>
-
-            </div>
-
+    <!-- Compliance Header -->
+    <div class="bg-white border-b border-gray-200 py-2">
+        <div class="container mx-auto px-4 text-center">
+            <span class="text-[10px] uppercase tracking-widest text-gray-400 font-semibold">Anzeige / Gesponserter Inhalt</span>
         </div>
     </div>
 
+    <!-- Navigation (Simuliert) -->
+    <nav class="bg-white shadow-sm sticky top-0 z-50">
+        <div class="max-w-4xl mx-auto px-4 h-16 flex items-center justify-between">
+            <div class="text-blue-600 font-extrabold text-xl tracking-tight italic">GesundheitsJournal<span class="text-gray-400">.de</span></div>
+            <div class="md:hidden">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+                </svg>
+            </div>
+        </div>
+    </nav>
 
-<script>
-    document.getElementById('today-date').textContent = new Date().toLocaleDateString('de-DE', { 
-        weekday: 'long', day: 'numeric', month: 'long', year: 'numeric' 
-    });
-</script>
+    <!-- Main Content -->
+    <main class="max-w-3xl mx-auto px-4 pt-8 pb-20">
+        
+        <!-- Article Header -->
+        <header class="mb-8">
+            <h1 class="text-3xl md:text-5xl font-extrabold text-gray-900 mb-4 leading-tight">
+                3 alltägliche Lebensmittel, die Ihren Stoffwechsel ab 40 „blockieren“ – und warum Gelatine Ihr größter Verbündeter sein könnte
+            </h1>
+            <p class="text-xl text-gray-600 mb-6 leading-relaxed">
+                Forscher haben entdeckt, dass bestimmte gewöhnliche Lebensmittel das Hormon stören könnten, das für die Fettverbrennung verantwortlich ist. Dies kann dazu führen, dass der Körper Kalorien bevorzugt an Bauch, Hüften und Armen speichert.
+            </p>
+            
+            <div class="flex items-center space-x-3 border-y border-gray-100 py-4">
+                <div class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center text-blue-600 font-bold">RE</div>
+                <div class="text-sm">
+                    <p class="font-bold text-gray-900">Von: Redaktionsteam · Gesundheit & Wellness</p>
+                    <p class="text-gray-500">Aktualisiert am <span id="current-date"></span></p>
+                </div>
+            </div>
+        </header>
 
+        <!-- Placeholder Image -->
+
+        <!-- Article Body -->
+        <article class="prose prose-lg max-w-none">
+            <p>Haben Sie sich morgens schon einmal auf die Waage gestellt, zugesehen, wie die Zahl wieder ein Stück nach oben geklettert ist, und dieses beklemmende Gefühl in der Brust gespürt?</p>
+            
+            <p>Haben Sie Ihren Kleiderschrank geöffnet, die Hose angeschaut, die letztes Jahr noch passte, und feststellen müssen, dass sie nicht einmal mehr über die Hüften rutscht?</p>
+
+            <p>Oder noch schlimmer: Haben Sie unter der Woche alles „richtig“ gemacht, auf Süßigkeiten verzichtet, Salate gegessen, waren im Fitnessstudio … und trotzdem hat sich die Waage keinen Millimeter bewegt?</p>
+
+            <p class="bg-blue-50 p-6 border-l-4 border-blue-500 font-semibold italic text-blue-900 my-8">
+                Forscher haben herausgefunden, dass bestimmte Lebensmittel den Körper in einen „Speichermodus“ versetzen können. Dies erschwert es dem Organismus, gespeichertes Fett als Energiequelle zu nutzen – fast unabhängig davon, wie viele Kalorien man einspart.
+            </p>
+
+            <p>Das Besorgniserregende daran? Die meisten Frauen über 40 konsumieren diese Lebensmittel jeden Tag in dem Glauben, ihrem Körper etwas Gutes zu tun.</p>
+
+            <h3 class="text-2xl font-bold text-gray-900 mt-10 mb-4 italic">Hier sind die drei größten Übeltäter:</h3>
+
+            <!-- Item 3 -->
+            <div class="my-8">
+                <h4 class="text-xl font-bold text-red-600 mb-2">3. „Zuckerfreier“ Joghurt (Zero-Produkte)</h4>
+ <div class="mb-8 rounded-xl overflow-hidden shadow-lg">
+                       <img src="images/sugar.jpg" alt="Gesunde Lebensmittel Auswahl" class="w-full h-auto">
+                   </div>
+                <p>Der kleine Becher, den man im Supermarktregal greift, weil er als „schlanke Option“ beworben wird, ist oft eine Falle. Studien legen nahe, dass die in diesen Produkten verwendeten künstlichen Süßstoffe das Gehirn verwirren können.</p>
+                <p>Das Gehirn empfängt das Signal „Süß“, bereitet sich auf die Verarbeitung von Zucker vor, doch die Energie bleibt aus. Das Resultat? Heißhunger-Attacken, meist schon wenige Stunden später. Und dabei verlangt der Körper selten nach Salat, sondern nach schnellen Kohlenhydraten wie Brot oder Keksen.</p>
+            </div>
+
+            <!-- Item 2 -->
+            <div class="my-8">
+                <h4 class="text-xl font-bold text-red-600 mb-2">2. Vollkornbrot aus dem Supermarkt</h4>
+                <div class="mb-8 rounded-xl overflow-hidden shadow-lg">
+                       <img src="images/bread.jpg" alt="Gesunde Lebensmittel Auswahl" class="w-full h-auto">
+                   </div>
+                <p>Viele tauschen Weißbrot gegen Vollkornbrot in der Hoffnung auf ein Upgrade. Doch viele im Handel erhältliche Versionen enthalten fast genauso viel raffiniertes Mehl wie normales Brot, angereichert mit einer kleinen Menge Ballaststoffen für die Optik.</p>
+                <p>Der Effekt auf den Körper kann ähnlich sein: Der Blutzuckerspiegel steigt, die Bauchspeicheldrüse schüttet Insulin aus. Insulin ist jedoch ein Hormon, das dem Körper signalisiert, Fett zu speichern – insbesondere in der Körpermitte. Je höher der Insulinspiegel, desto schwerer hat es der Körper, auf vorhandene Fettreserven zuzugreifen.</p>
+            </div>
+
+            <!-- Item 1 -->
+            <div class="my-8">
+                <h4 class="text-xl font-bold text-red-600 mb-2">1. Raffinierte Pflanzenöle</h4>
+                <div class="mb-8 rounded-xl overflow-hidden shadow-lg">
+                       <img src="images/sugar.jpg" alt="Gesunde Lebensmittel Auswahl" class="w-full h-auto">
+                   </div>
+                <p>Dies ist der wohl „stillste“ Übeltäter. Sojaöl, Rapsöl oder Maisöl stecken in fast allem: Margarine, Gebäck, Dressings und Fertiggerichten.</p>
+                <p>Wenn diese Öle stark verarbeitet oder mehrfach erhitzt werden, können sie Verbindungen begünstigen, die im Körper Entzündungsprozesse fördern. Zelluläre Entzündungen können dazu führen, dass Fettzellen den Zugriff blockieren. Das ist oft der Grund, warum Frauen trotz Diät und Sport keine Fortschritte sehen – es mangelt nicht an Disziplin, sondern an einer optimalen zellulären Umgebung.</p>
+            </div>
+
+            <!-- Abschnitt: Der neue Ansatz (Gelatine & Stoffwechsel) -->
+<section class="max-w-3xl mx-auto px-6 py-10 text-gray-800 leading-relaxed">
     
+    <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mb-6 font-serif">
+        Hier kommt ein neuer Ansatz ins Spiel
+    </h2>
+
+    <p class="mb-6 text-lg">
+        Während die oben genannten Lebensmittel den Körper in einer Art „Speichermodus“ halten können, untersuchen Forscher nun einen interessanten natürlichen Ansatz, um den Stoffwechsel wieder sanft in Einklang zu bringen. Dabei könnte <span class="font-semibold text-blue-900">Gelatine</span> ein wertvoller Begleiter sein, um diesen Prozess zu unterstützen.
+    </p>
+
+    <p class="mb-6 text-lg italic border-l-4 border-gray-200 pl-4 text-gray-600">
+        Die Logik dahinter ist ebenso einfach wie einleuchtend.
+    </p>
+
+    <p class="mb-6 text-lg">
+        Haben Sie schon einmal bemerkt, dass sich Ihr Hunger nach einer schlechten Nacht am nächsten Tag völlig unkontrollierbar anfühlt und der Heißhunger auf Süßes extrem ist? Das liegt meist nicht an mangelnder Disziplin. Es ist oft ein Signal des Körpers, der nach Unterstützung für sein hormonelles Gleichgewicht verlangt.
+    </p>
+
+    <div class="my-10 overflow-hidden rounded-xl shadow-sm">
+        <img src="images/gelatin.jpg" alt="Natürliche Zubereitung" class="w-full h-auto object-cover">
+    </div>
+
+    <p class="mb-6 text-lg">
+        Natürliche, zuckerfreie Gelatine ist eine der reichsten Quellen für die Aminosäure <strong>Glycin</strong>. Diese kann dem Körper dabei helfen, während der Nacht in einen Zustand tiefer Entspannung zu finden. Und genau während dieser erholsamen Tiefschlafphasen finden im Körper wichtige Regenerationsprozesse statt, die auch die natürliche Fettverbrennung positiv beeinflussen können.
+    </p>
+
+    <!-- Beobachtungs-Box (High Trust Element) -->
+    <div class="my-8 p-6 md:p-8 bg-blue-50 border-l-4 border-blue-600 rounded-r-xl">
+        <h3 class="text-lg font-bold text-blue-900 mb-3 uppercase tracking-wide text-sm">Beobachtungen aus der Praxis:</h3>
+        <p class="text-gray-700 mb-4">
+            In Beobachtungen zeigten sich interessante Ergebnisse: Personen, die natürliche Gelatine in ihren Alltag integrierten, berichteten häufig davon, nachts seltener aufzuwachen und sich am nächsten Tag satter zu fühlen.
+        </p>
+        <p class="text-gray-700">
+            Im Laufe einiger Wochen bemerkten viele, dass ihr Körper begann, gespeicherte Energiereserven wieder effizienter zu nutzen – ein Gefühl, als würde der Körper nach Jahren des Stillstands endlich wieder „mitspielen“.
+        </p>
+    </div>
+
+    <h4 class="text-xl font-bold text-gray-900 mb-4">Die häufigsten Rückmeldungen:</h4>
+    <ul class="space-y-3 mb-8">
+        <li class="flex items-start">
+            <svg class="w-6 h-6 text-green-500 mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+            <span>Erholsamere Nächte und tieferer Schlaf</span>
+        </li>
+        <li class="flex items-start">
+            <svg class="w-6 h-6 text-green-500 mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+            <span>Deutlich weniger Heißhunger auf Süßigkeiten</span>
+        </li>
+        <li class="flex items-start">
+            <svg class="w-6 h-6 text-green-500 mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+            <span>Das Gefühl, dass der Körper wieder im natürlichen Rhythmus arbeitet</span>
+        </li>
+    </ul>
+
+</section>
+
+<!-- Übergang zum Produkt & Sales Page CTA -->
+<section class="max-w-3xl mx-auto px-6 py-12 bg-white border-t border-gray-100">
+    
+    <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mb-6 font-serif">
+        Gibt es einen Haken?
+    </h2>
+
+    <p class="mb-6 text-lg">
+        Die Herausforderung für viele Frauen ist jedoch: Herkömmliche Gelatine-Produkte aus dem Supermarkt sind oft mit Zucker, künstlichen Farbstoffen und Zusatzstoffen versetzt, welche die positiven Effekte auf den Stoffwechsel sofort wieder zunichtemachen könnten. 
+    </p>
+
+    <p class="mb-8 text-lg">
+        Zudem müsste man enorme Mengen konsumieren, um die therapeutisch relevante Dosis an reinem Glycin zu erhalten, die in den Beobachtungen den entscheidenden Unterschied machte. Aus diesem Grund haben Experten eine <strong>hochkonzentrierte Lösung</strong> entwickelt, die genau hier ansetzt.
+    </p>
+
+    <!-- Produkt-Präsentations-Box -->
+    <div class="my-10 bg-gray-50 rounded-3xl border border-gray-200 overflow-hidden shadow-sm">
+        <div class="p-8 md:p-10 flex flex-col md:flex-row items-center gap-10">
+            <!-- Platzhalter für Produktbild / Mockup -->
+            <div class="w-full md:w-1/3 aspect-square bg-white rounded-2xl shadow-inner flex items-center justify-center border border-gray-100 relative group">
+       <img src= "images/2bottles.webp">
+            </div>
+
+            <div class="w-full md:w-2/3 space-y-4">
+                <div class="inline-block px-3 py-1 bg-blue-100 text-blue-700 text-xs font-bold rounded-full uppercase tracking-wider">
+                    Empfehlung der Redaktion
+                </div>
+                <h3 class="text-2xl font-bold text-gray-900 leading-tight">
+                    Die spezialisierte Glycin-Formel für Frauen über 40
+                </h3>
+                <p class="text-gray-600 text-base">
+                    Diese rein natürliche Formel wurde entwickelt, um die nächtliche Regeneration gezielt zu unterstützen und den Körper dabei zu begleiten, seine natürlichen Energiereserven wieder optimal zu nutzen.
+                </p>
+                <ul class="space-y-2">
+                    <li class="flex items-center text-sm text-gray-700">
+                        <span class="w-5 h-5 bg-green-100 text-green-600 rounded-full flex items-center justify-center mr-3 flex-shrink-0 text-[10px]">✓</span>
+                        Hochdosiertes Glycin in reinster Qualität
+                    </li>
+                    <li class="flex items-center text-sm text-gray-700">
+                        <span class="w-5 h-5 bg-green-100 text-green-600 rounded-full flex items-center justify-center mr-3 flex-shrink-0 text-[10px]">✓</span>
+                        Frei von künstlichen Zusätzen & Zucker
+                    </li>
+                    <li class="flex items-center text-sm text-gray-700">
+                        <span class="w-5 h-5 bg-green-100 text-green-600 rounded-full flex items-center justify-center mr-3 flex-shrink-0 text-[10px]">✓</span>
+                        Speziell für den weiblichen Hormonhaushalt ab 40
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- Final CTA Box -->
+    <div class="text-center space-y-8 py-6">
+        <div class="space-y-2">
+            <h4 class="text-xl font-bold text-gray-900">Möchten Sie die Verfügbarkeit prüfen?</h4>
+            <p class="text-gray-600">Auf der offiziellen Webseite erfahren Sie mehr über die Inhaltsstoffe und aktuelle Angebote.</p>
+        </div>
+
+        <div class="relative inline-block group">
+            <!-- Pulsing Background Effect -->
+            <div class="absolute -inset-1 bg-green-400 rounded-full blur opacity-25 group-hover:opacity-50 transition duration-1000 group-hover:duration-200 animate-pulse"></div>
+            
+            <a href="https://todayushealth.com/lp-sjaro/" class="relative inline-flex items-center justify-center bg-green-600 hover:bg-green-700 text-white font-extrabold py-5 px-10 md:px-16 rounded-full text-xl md:text-2xl transition-all shadow-xl uppercase tracking-tighter">
+                ZUR OFFIZIELLEN WEBSEITE
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 ml-3 group-hover:translate-x-2 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                </svg>
+            </a>
+        </div>
+
+        <!-- Social Proof & Security Under Button -->
+        <div class="flex flex-col items-center justify-center space-y-4 pt-4">
+            <div class="flex items-center space-x-2">
+                <div class="flex text-yellow-400">
+                    <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
+                    <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
+                    <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
+                    <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
+                    <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20"><path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"/></svg>
+                </div>
+                <span class="text-sm font-semibold text-gray-700">4.9/5 Bewertung</span>
+            </div>
+            <p class="text-[10px] text-gray-400 uppercase tracking-widest flex items-center">
+                <svg class="w-3 h-3 mr-1" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M5 9V7a5 5 0 0110 0v2a2 2 0 012 2v5a2 2 0 01-2 2H5a2 2 0 01-2-2v-5a2 2 0 012-2zm8-2v2H7V7a3 3 0 016 0z" clip-rule="evenodd"></path></svg>
+                Sichere Verbindung & Datenschutz garantiert
+            </p>
+        </div>
+    </div>
+
+    <!-- Final Compliance Footer Note -->
+    <p class="text-[11px] text-gray-400 mt-12 leading-relaxed text-center italic border-t pt-6">
+        *Wichtiger Hinweis: Die Ergebnisse sind individuell und können variieren. Nahrungsergänzungsmittel sind kein Ersatz für eine ausgewogene Ernährung und einen gesunden Lebensstil. Konsultieren Sie vor der Einnahme Ihren Arzt.
+    </p>
+
+</section>
+
+<p class="text-xs text-gray-400 italic mt-8 border-t pt-6 leading-relaxed">
+    <strong>Wichtiger Hinweis:</strong> Die Informationen in diesem Artikel dienen ausschließlich Informationszwecken. Bei dem verlinkten Produkt handelt es sich um ein Nahrungsergänzungsmittel. Die individuellen Ergebnisse können variieren. Es wird empfohlen, vor der Einnahme neuer Präparate Rücksprache mit einem Arzt zu halten.
+</p>
+    </main>
+
+    <!-- Footer / Compliance -->
+    <footer class="bg-white border-t border-gray-200 pt-12 pb-24">
+        <div class="max-w-4xl mx-auto px-4 text-center">
+            <div class="text-gray-400 text-[11px] leading-relaxed space-y-4">
+                <p>
+                    <strong>HAFTUNGSAUSSCHLUSS:</strong> Diese Website ist eine journalistische Anzeige für Informationen. Die hier bereitgestellten Informationen dienen ausschließlich zu Informationszwecken und ersetzen keine professionelle medizinische Beratung, Diagnose oder Behandlung. Ergebnisse können variieren und sind nicht garantiert. Suchen Sie immer den Rat Ihres Arztes oder eines qualifizierten Gesundheitsdienstleisters bei Fragen zu einer Erkrankung.
+                </p>
+                <div class="flex justify-center space-x-4 font-medium text-gray-500 uppercase tracking-tighter mt-8">
+                    <a href="policy.html" class="hover:underline">Impressum</a>
+                    <a href="policy.html" class="hover:underline">Datenschutz</a>
+                    <a href="policy.html" class="hover:underline">Kontakt</a>
+                    <a href="policy.html" class="hover:underline">AGB</a>
+                </div>
+                <p class="mt-8">© <span id="year"></span> GesundheitsJournal - Alle Rechte vorbehalten.</p>
+            </div>
+        </div>
+    </footer>
+
+
+
+    <script>
+        // Set current date
+        const options = { day: '2-digit', month: 'long', year: 'numeric' };
+        document.getElementById('current-date').innerText = new Date().toLocaleDateString('de-DE', options);
+        document.getElementById('year').innerText = new Date().getFullYear();
+
+        // Show sticky button on scroll
+        window.onscroll = function() {
+            const btn = document.getElementById('sticky-btn');
+            if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+                btn.classList.remove('hidden');
+                btn.classList.add('sticky-cta');
+            } else {
+                btn.classList.add('hidden');
+            }
+        };
+    </script>
 </body>
 </html>
